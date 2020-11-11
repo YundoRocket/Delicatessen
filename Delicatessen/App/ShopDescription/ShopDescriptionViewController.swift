@@ -26,17 +26,7 @@ final class ShopDescriptionViewController: UIViewController {
         self.view.addGestureRecognizer(panGestureRecognizer)
     }
 
-     private func createTheView() {
-
-         let xCoord = self.view.bounds.width / 2 - 100
-         let yCoord = self.view.bounds.height / 2 - 100
-
-         let centeredView = UIView(frame: CGRect(x: 0, y: 100, width: 414, height: 414))
-         centeredView.backgroundColor = .white
-         self.view.addSubview(centeredView)
-        
-        
-     }
+     
     // MARK: - Helpers
     
     private func setUI() {
