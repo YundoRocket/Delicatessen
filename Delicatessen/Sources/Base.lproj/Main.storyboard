@@ -51,13 +51,27 @@
                     <view key="view" contentMode="scaleToFill" id="rey-hH-Jmh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qs1-mc-nTd">
+                                <rect key="frame" x="0.0" y="496" width="414" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="zd2-0o-luR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qs1-mc-nTd" firstAttribute="trailing" secondItem="D1z-Si-ru2" secondAttribute="trailing" id="3Hc-ZV-fSb"/>
+                            <constraint firstAttribute="bottom" secondItem="Qs1-mc-nTd" secondAttribute="bottom" id="EYl-Ys-HND"/>
+                            <constraint firstItem="Qs1-mc-nTd" firstAttribute="leading" secondItem="D1z-Si-ru2" secondAttribute="leading" id="JPX-l7-DA6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D1z-Si-ru2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtD-oq-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="774"/>
+            <point key="canvasLocation" x="582.60869565217399" y="773.4375"/>
         </scene>
     </scenes>
 </document>

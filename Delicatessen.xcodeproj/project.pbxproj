@@ -10,6 +10,7 @@
 		91DCB137255ADCB400395EA0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB136255ADCB400395EA0 /* Shop.swift */; };
 		91DCB13A255AFBF100395EA0 /* ShopDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB139255AFBF100395EA0 /* ShopDescriptionViewController.swift */; };
 		91DCB13C255AFC2C00395EA0 /* ShopDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB13B255AFC2C00395EA0 /* ShopDescriptionViewModel.swift */; };
+		91DCB13E255C49E700395EA0 /* SetSizePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB13D255C49E700395EA0 /* SetSizePresentationController.swift */; };
 		91E3B98D255A8EF700D45B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B98C255A8EF700D45B23 /* AppDelegate.swift */; };
 		91E3B994255A8EF700D45B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E3B992255A8EF700D45B23 /* Main.storyboard */; };
 		91E3B996255A8EFB00D45B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E3B995255A8EFB00D45B23 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		91DCB136255ADCB400395EA0 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		91DCB139255AFBF100395EA0 /* ShopDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDescriptionViewController.swift; sourceTree = "<group>"; };
 		91DCB13B255AFC2C00395EA0 /* ShopDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDescriptionViewModel.swift; sourceTree = "<group>"; };
+		91DCB13D255C49E700395EA0 /* SetSizePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSizePresentationController.swift; sourceTree = "<group>"; };
 		91E3B989255A8EF700D45B23 /* Delicatessen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delicatessen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E3B98C255A8EF700D45B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E3B993255A8EF700D45B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				91DCB139255AFBF100395EA0 /* ShopDescriptionViewController.swift */,
+				91DCB13D255C49E700395EA0 /* SetSizePresentationController.swift */,
 				91DCB13B255AFC2C00395EA0 /* ShopDescriptionViewModel.swift */,
 			);
 			path = ShopDescription;
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DCB13E255C49E700395EA0 /* SetSizePresentationController.swift in Sources */,
 				91E3B9C5255A90EA00D45B23 /* RequestCancellationToken.swift in Sources */,
 				91E3B9B1255A8F8C00D45B23 /* Coordinator.swift in Sources */,
 				91E3B9C8255A918400D45B23 /* MapCoordinator.swift in Sources */,

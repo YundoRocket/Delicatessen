@@ -41,6 +41,8 @@ final class MapCoordinator {
     
     private func showShopDescription() {
         let viewController = screens.createShopDescriptionViewController()
+        viewController.modalPresentationStyle = .overCurrentContext
+        viewController.modalTransitionStyle = .coverVertical
         presenter.showDetailViewController(viewController, sender: self)
     }
 }
