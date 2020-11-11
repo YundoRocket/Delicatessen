@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Vtq-KM-l0W">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="hVg-kR-9zH" customClass="MapViewController" customModule="Delicatessen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vek-9C-cLF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="auD-ge-xAB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etX-Hs-DDY">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="auD-ge-xAB" firstAttribute="trailing" secondItem="1tx-iY-a5C" secondAttribute="trailing" id="Egm-lL-R8v"/>
+                            <constraint firstItem="auD-ge-xAB" firstAttribute="top" secondItem="1tx-iY-a5C" secondAttribute="top" id="Jqg-V5-Ijz"/>
+                            <constraint firstItem="auD-ge-xAB" firstAttribute="leading" secondItem="1tx-iY-a5C" secondAttribute="leading" id="Ssb-71-mSJ"/>
+                            <constraint firstItem="1tx-iY-a5C" firstAttribute="bottom" secondItem="etX-Hs-DDY" secondAttribute="bottom" id="Yks-PD-oyg"/>
+                            <constraint firstItem="etX-Hs-DDY" firstAttribute="leading" secondItem="1tx-iY-a5C" secondAttribute="leading" id="aBB-KI-cY7"/>
+                            <constraint firstItem="1tx-iY-a5C" firstAttribute="trailing" secondItem="etX-Hs-DDY" secondAttribute="trailing" id="geb-Sa-drc"/>
+                            <constraint firstItem="etX-Hs-DDY" firstAttribute="top" secondItem="auD-ge-xAB" secondAttribute="bottom" id="svi-Xg-Eay"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1tx-iY-a5C"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="etX-Hs-DDY" id="esX-Md-q1S"/>
+                        <outlet property="searchBar" destination="auD-ge-xAB" id="I2A-D1-CIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUc-7q-5aS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="82"/>
+        </scene>
+        <!--Shop Description View Controller-->
+        <scene sceneID="ddE-Ak-NKl">
+            <objects>
+                <viewController storyboardIdentifier="ShopDescriptionViewController" id="VZR-ds-mqp" customClass="ShopDescriptionViewController" customModule="Delicatessen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rey-hH-Jmh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D1z-Si-ru2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtD-oq-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="774"/>
+        </scene>
+    </scenes>
+</document>
