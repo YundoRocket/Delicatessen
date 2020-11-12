@@ -40,7 +40,7 @@ extension Screens {
 
 extension Screens {
     func createCategoriesViewController() -> UIViewController {
-        let viewController = storyboard.instantiateViewController(identifier: "CategoriesViewController") as! ShopDescriptionViewController
+        let viewController = storyboard.instantiateViewController(identifier: "CategoriesViewController") as! CategoriesViewController
         return viewController
     }
 }
