@@ -23,6 +23,7 @@ final class ShopDescriptionViewController: UIViewController {
             shopDescriptionView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         }
     }
+
     @IBOutlet weak private var shopNameLabel: UILabel!
     @IBOutlet weak private var shopAddressLabel: UILabel!
 
@@ -181,12 +182,15 @@ final class ShopDescriptionViewController: UIViewController {
     
     // MARK: - Actions
 
-    @IBAction private func didSelectPhoneNumberButton(_ sender: Any) {
-        
+    @IBAction private func didSelectPhoneNumberButton(_ sender: UIButton) {
+        guard let phoneNumber = sender.titleLabel?.text else { return }
+        guard let url = URL(string: "tel://\(phoneNumber)") else { return }
+        UIApplication.shared.open(url, options:[:], completionHandler: nil)
     }
+   
 
-    @IBAction private func didSelectPlaceAnOrderButton(_ sender: Any) {
-        
+    @IBAction private func didSelectPlaceAnOrderButton(_ sender: UIButton) {
+        viewModel.didSelectPlaceAnOrder()
     }
 }
 

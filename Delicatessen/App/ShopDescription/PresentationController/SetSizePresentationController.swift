@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HalfSizePresentationController : UIPresentationController {
+final class HalfSizePresentationController : UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         get {
             guard let theView = containerView else {

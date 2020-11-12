@@ -65,7 +65,7 @@
                                             <color key="titleColor" red="0.065025636240000004" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="didSelectPlaceAnOrderButton:" destination="VZR-ds-mqp" eventType="touchUpInside" id="m0i-je-mzN"/>
+                                            <action selector="didSelectPlaceAnOrderButton:" destination="VZR-ds-mqp" eventType="touchUpInside" id="UaW-YT-ohN"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dkl-5l-8AI">
@@ -89,22 +89,22 @@
                                         <rect key="frame" x="84" y="86" width="246" height="216"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-aV-rRK">
-                                                <rect key="frame" x="56.5" y="0.0" width="133" height="67.5"/>
+                                                <rect key="frame" x="65.5" y="0.0" width="115" height="67.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Téléphone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-Ae-bZA">
-                                                        <rect key="frame" x="31" y="0.0" width="71" height="27.5"/>
+                                                        <rect key="frame" x="22" y="0.0" width="71" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLr-2D-ZAu">
-                                                        <rect key="frame" x="0.0" y="27.5" width="133" height="40"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="115" height="40"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                                        <state key="normal" title="04 50 39 47 27">
+                                                        <state key="normal" title="0450394727">
                                                             <color key="titleColor" red="0.065025636240000004" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="didSelectPhoneNumberButton:" destination="VZR-ds-mqp" eventType="touchUpInside" id="Cef-fe-drF"/>
+                                                            <action selector="didSelectPhoneNumberButton:" destination="VZR-ds-mqp" eventType="touchUpInside" id="JeY-71-Wtt"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -166,8 +166,8 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dim : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chB-u5-MT6">
-                                                <rect key="frame" x="68.5" y="188.5" width="109.5" height="27.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dim : 8H - 13H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chB-u5-MT6">
+                                                <rect key="frame" x="72" y="188.5" width="102.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

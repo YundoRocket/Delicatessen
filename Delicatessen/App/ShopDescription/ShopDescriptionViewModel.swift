@@ -10,6 +10,21 @@ import Foundation
 
 final class ShopDescriptionViewModel {
     
+    // MARK: - Privates Properties
+    
+    private let actions: Actions
+    
+    struct Actions {
+        let didPresentShopDescription: VoidClosure
+    }
+    
+    // MARK: - Init
+
+    init(
+        actions: Actions
+    ) {
+        self.actions = actions
+    }
     // MARK: - Outputs
     
     var shopNameText: InputClosure<String>?
@@ -41,6 +56,9 @@ final class ShopDescriptionViewModel {
     }
     
     func didSelectPlaceAnOrder() {
-        
+        actions.didPresentShopDescription()
     }
+    
+    // MARK: - Helpers
+    
 }
