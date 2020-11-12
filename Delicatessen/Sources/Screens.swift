@@ -32,7 +32,7 @@ extension Screens {
 extension Screens {
     func createShopDescriptionViewController() -> UIViewController {
         let viewController = storyboard.instantiateViewController(identifier: "ShopDescriptionViewController") as! ShopDescriptionViewController
-        let viewModel = shopDescriptionViewModel()
+        let viewModel = ShopDescriptionViewModel()
         viewController.viewModel = viewModel
         return viewController
     }

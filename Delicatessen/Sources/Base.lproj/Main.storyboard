@@ -54,9 +54,137 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qs1-mc-nTd">
                                 <rect key="frame" x="0.0" y="496" width="414" height="400"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSO-C6-kVV">
+                                        <rect key="frame" x="110" y="327" width="194" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="194" id="Fre-Yh-qqk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                        <state key="normal" title="Passer une commande">
+                                            <color key="titleColor" red="0.065025636240000004" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didSelectPlaceAnOrderButton:" destination="VZR-ds-mqp" eventType="touchUpInside" id="m0i-je-mzN"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dkl-5l-8AI">
+                                        <rect key="frame" x="8" y="10" width="398" height="68"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrefour Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-W2-12L">
+                                                <rect key="frame" x="113" y="0.0" width="172.5" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="174 Rue de la Scie, 74890, Bons-en-Chablais" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9up-wi-8Ls">
+                                                <rect key="frame" x="44" y="40.5" width="310" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="P0D-q0-Jf6">
+                                        <rect key="frame" x="84" y="86" width="246" height="216"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nhe-aV-rRK">
+                                                <rect key="frame" x="56.5" y="0.0" width="133" height="67.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Téléphone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-Ae-bZA">
+                                                        <rect key="frame" x="31" y="0.0" width="71" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLr-2D-ZAu">
+                                                        <rect key="frame" x="0.0" y="27.5" width="133" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                        <state key="normal" title="04 50 39 47 27">
+                                                            <color key="titleColor" red="0.065025636240000004" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didSelectPhoneNumberButton:" destination="VZR-ds-mqp" eventType="touchUpInside" id="Cef-fe-drF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horaires" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIc-xx-1aa">
+                                                <rect key="frame" x="91.5" y="70.5" width="63.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2CG-MO-SYG">
+                                                <rect key="frame" x="0.0" y="101" width="246" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NZ0-Hu-u1Q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lun : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCC-OX-aT3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="112.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mar : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlX-iw-I5L">
+                                                                <rect key="frame" x="0.0" y="28.5" width="112.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mer : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-LG-dAY">
+                                                                <rect key="frame" x="0.0" y="57" width="112.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ykM-tB-Cgy">
+                                                        <rect key="frame" x="132.5" y="0.0" width="113.5" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeu : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvN-9l-WNt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ven : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IL-0G-Cj3">
+                                                                <rect key="frame" x="0.0" y="28.5" width="113.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sam : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ1-ag-KKn">
+                                                                <rect key="frame" x="0.0" y="57" width="113.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dim : 8H - 20H" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chB-u5-MT6">
+                                                <rect key="frame" x="68.5" y="188.5" width="109.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xSO-C6-kVV" secondAttribute="bottom" constant="30" id="4fR-2X-hMl"/>
+                                    <constraint firstAttribute="trailing" secondItem="dkl-5l-8AI" secondAttribute="trailing" constant="8" id="U3c-C5-KXE"/>
+                                    <constraint firstItem="P0D-q0-Jf6" firstAttribute="centerX" secondItem="Qs1-mc-nTd" secondAttribute="centerX" id="qII-Xv-QHE"/>
+                                    <constraint firstItem="xSO-C6-kVV" firstAttribute="centerX" secondItem="Qs1-mc-nTd" secondAttribute="centerX" id="rqe-lu-93a"/>
+                                    <constraint firstItem="dkl-5l-8AI" firstAttribute="top" secondItem="Qs1-mc-nTd" secondAttribute="top" constant="10" id="yKJ-6H-wLp"/>
+                                    <constraint firstItem="P0D-q0-Jf6" firstAttribute="top" secondItem="dkl-5l-8AI" secondAttribute="bottom" constant="8" id="z2e-dH-Yid"/>
                                     <constraint firstAttribute="height" constant="400" id="zd2-0o-luR"/>
+                                    <constraint firstItem="dkl-5l-8AI" firstAttribute="leading" secondItem="Qs1-mc-nTd" secondAttribute="leading" constant="8" id="zvy-gw-pKu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -68,6 +196,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1z-Si-ru2"/>
                     </view>
+                    <connections>
+                        <outlet property="hoursFridayLabel" destination="2IL-0G-Cj3" id="8vj-Ae-Iwl"/>
+                        <outlet property="hoursMondayLabel" destination="HCC-OX-aT3" id="niP-4K-laK"/>
+                        <outlet property="hoursSaturdayLabel" destination="MQ1-ag-KKn" id="TKD-s0-LbJ"/>
+                        <outlet property="hoursSundayLabel" destination="chB-u5-MT6" id="i9o-vr-DKM"/>
+                        <outlet property="hoursThursdayLabel" destination="nvN-9l-WNt" id="eTI-De-6cd"/>
+                        <outlet property="hoursTuesdayLabel" destination="rlX-iw-I5L" id="pY3-kX-FT0"/>
+                        <outlet property="hoursWednesdayLabel" destination="5Oy-LG-dAY" id="0tn-ZI-gz3"/>
+                        <outlet property="phoneLabel" destination="2hD-Ae-bZA" id="zMN-eN-aso"/>
+                        <outlet property="phoneNumberButton" destination="sLr-2D-ZAu" id="mvp-h9-bUl"/>
+                        <outlet property="placeAnOrderButton" destination="xSO-C6-kVV" id="2TH-uk-TKY"/>
+                        <outlet property="shopAddressLabel" destination="9up-wi-8Ls" id="omc-JZ-xq2"/>
+                        <outlet property="shopDescriptionView" destination="Qs1-mc-nTd" id="bGb-pK-Rzj"/>
+                        <outlet property="shopHoursLabel" destination="SIc-xx-1aa" id="LcM-3E-Y6Z"/>
+                        <outlet property="shopNameLabel" destination="c7x-W2-12L" id="xCg-f6-DFR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtD-oq-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -57,21 +57,24 @@ final class MapViewController: UIViewController {
         }
     }
 
-    func setUpLocationManager() {
+    private func setUpLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
 
-    func centerViewOnUserLocation() {
+    private func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             mapView.mapType = MKMapType.standard
-            let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-            let region = MKCoordinateRegion(center: location, span: span)
-            mapView.setRegion(region, animated: true)
+            let span = MKCoordinateSpan(latitudeDelta: 0.05,
+                                        longitudeDelta: 0.05)
+            let region = MKCoordinateRegion(center: location,
+                                            span: span)
+            mapView.setRegion(region,
+                              animated: true)
         }
     }
 
-    func checkUserLocactionService() {
+    private func checkUserLocactionService() {
         if CLLocationManager.locationServicesEnabled() {
             setUpLocationManager()
             checkLocationAuthorization()
@@ -80,7 +83,7 @@ final class MapViewController: UIViewController {
         }
     }
 
-    func checkLocationAuthorization() {
+    private func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             centerViewOnUserLocation()
@@ -119,7 +122,8 @@ extension MapViewController: MKMapViewDelegate {
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         
         if annotationView == nil {
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView = MKPinAnnotationView(annotation: annotation,
+                                                 reuseIdentifier: identifier)
             annotationView?.canShowCallout = true
             
             let button = UIButton(type: .detailDisclosure)
@@ -131,14 +135,10 @@ extension MapViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-//        guard let shop = view.annotation as? Shop else { return }
-        
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl
+    ) {
         viewModel.didSelectShopDescription()
-        
-//        let shopName = shop.title
-//        let ac = UIAlertController(title: shopName, message: nil, preferredStyle: .alert)
-//        ac.addAction(UIAlertAction(title: "OK", style: .default))
-//        present(ac, animated: true)
     }
 }
