@@ -38,7 +38,7 @@ final class MapViewModelTests: XCTestCase {
             
         }
         
-        viewModel = MapViewModel(action: actions)
+        viewModel = MapViewModel(actions: actions)
         
         viewModel.viewDidLoad()
         viewModel.didSelectShopDescription()
