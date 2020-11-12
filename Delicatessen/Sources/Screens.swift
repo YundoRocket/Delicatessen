@@ -23,17 +23,24 @@ public class Screens {
 extension Screens {
     func createMapViewController(actions: MapViewModel.Actions) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        let viewModel = MapViewModel(action: actions)
+        let viewModel = MapViewModel(actions: actions)
         viewController.viewModel = viewModel
         return viewController
     }
 }
 
 extension Screens {
-    func createShopDescriptionViewController() -> UIViewController {
+    func createShopDescriptionViewController(actions: ShopDescriptionViewModel.Actions) -> UIViewController {
         let viewController = storyboard.instantiateViewController(identifier: "ShopDescriptionViewController") as! ShopDescriptionViewController
-        let viewModel = shopDescriptionViewModel()
+        let viewModel = ShopDescriptionViewModel(actions: actions)
         viewController.viewModel = viewModel
+        return viewController
+    }
+}
+
+extension Screens {
+    func createCategoriesViewController() -> UIViewController {
+        let viewController = storyboard.instantiateViewController(identifier: "CategoriesViewController") as! ShopDescriptionViewController
         return viewController
     }
 }

@@ -8,14 +8,57 @@
 
 import Foundation
 
-final class shopDescriptionViewModel {
+final class ShopDescriptionViewModel {
     
+    // MARK: - Privates Properties
+    
+    private let actions: Actions
+    
+    struct Actions {
+        let didPresentShopDescription: VoidClosure
+    }
+    
+    // MARK: - Init
+
+    init(
+        actions: Actions
+    ) {
+        self.actions = actions
+    }
     // MARK: - Outputs
     
+    var shopNameText: InputClosure<String>?
+    var shopAddressText: InputClosure<String>?
+   
+    // Phone
+    var phoneText: InputClosure<String>?
+    var phoneNumberText: InputClosure<String>?
+    
+    // Hours
+    var shopHoursText: InputClosure<String>?
+    var hoursMondayText: InputClosure<String>?
+    var hoursTuesdayText: InputClosure<String>?
+    var hoursWednesdayText: InputClosure<String>?
+    var hoursThursdayText: InputClosure<String>?
+    var hoursFridayText: InputClosure<String>?
+    var hoursSaturdayText: InputClosure<String>?
+    var hoursSundayText: InputClosure<String>?
+    var placeAnOrderText: InputClosure<String>?
     
     // MARK: - Inputs
     
     func viewDidLoad() {
         
     }
+    
+    func didSelectPhoneNumber() {
+        
+    }
+    
+    func didSelectPlaceAnOrder() {
+        actions.didPresentShopDescription()
+    }
+    
+    // MARK: - Helpers
+    
 }

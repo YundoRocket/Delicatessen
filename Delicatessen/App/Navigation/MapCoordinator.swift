@@ -40,7 +40,20 @@ final class MapCoordinator {
     }
     
     private func showShopDescription() {
-        let viewController = screens.createShopDescriptionViewController()
-        presenter.showDetailViewController(viewController, sender: self)
+        let actions: ShopDescriptionViewModel.Actions =  .init(
+            didPresentShopDescription: {
+                self.showCategories()
+        })
+        let viewController = screens.createShopDescriptionViewController(actions: actions)
+        viewController.modalPresentationStyle = .overCurrentContext
+        viewController.modalTransitionStyle = .coverVertical
+        presenter.showDetailViewController(viewController,
+                                           sender: self)
+    }
+    
+    private func showCategories() {
+        let viewController = screens.createCategoriesViewController()
+        presenter.pushViewController(viewController,
+                                     animated: true)
     }
 }

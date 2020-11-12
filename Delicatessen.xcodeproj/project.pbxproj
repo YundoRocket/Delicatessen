@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911C389E255DBA4200458662 /* ShopDescriptionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C389D255DBA4200458662 /* ShopDescriptionViewModelTests.swift */; };
+		911C38A0255DBA8900458662 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C389F255DBA8900458662 /* MapViewModelTests.swift */; };
 		91DCB137255ADCB400395EA0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB136255ADCB400395EA0 /* Shop.swift */; };
 		91DCB13A255AFBF100395EA0 /* ShopDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB139255AFBF100395EA0 /* ShopDescriptionViewController.swift */; };
 		91DCB13C255AFC2C00395EA0 /* ShopDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB13B255AFC2C00395EA0 /* ShopDescriptionViewModel.swift */; };
+		91DCB13E255C49E700395EA0 /* SetSizePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCB13D255C49E700395EA0 /* SetSizePresentationController.swift */; };
 		91E3B98D255A8EF700D45B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B98C255A8EF700D45B23 /* AppDelegate.swift */; };
 		91E3B994255A8EF700D45B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E3B992255A8EF700D45B23 /* Main.storyboard */; };
 		91E3B996255A8EFB00D45B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E3B995255A8EFB00D45B23 /* Assets.xcassets */; };
 		91E3B999255A8EFB00D45B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E3B997255A8EFB00D45B23 /* LaunchScreen.storyboard */; };
-		91E3B9A4255A8EFB00D45B23 /* DelicatessenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B9A3255A8EFB00D45B23 /* DelicatessenTests.swift */; };
 		91E3B9B1255A8F8C00D45B23 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B9B0255A8F8C00D45B23 /* Coordinator.swift */; };
 		91E3B9B3255A8FA100D45B23 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B9B2255A8FA100D45B23 /* Context.swift */; };
 		91E3B9B6255A8FE800D45B23 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3B9B5255A8FE800D45B23 /* MainCoordinator.swift */; };
@@ -40,9 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		911C389D255DBA4200458662 /* ShopDescriptionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDescriptionViewModelTests.swift; sourceTree = "<group>"; };
+		911C389F255DBA8900458662 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		91DCB136255ADCB400395EA0 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		91DCB139255AFBF100395EA0 /* ShopDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDescriptionViewController.swift; sourceTree = "<group>"; };
 		91DCB13B255AFC2C00395EA0 /* ShopDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDescriptionViewModel.swift; sourceTree = "<group>"; };
+		91DCB13D255C49E700395EA0 /* SetSizePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSizePresentationController.swift; sourceTree = "<group>"; };
 		91E3B989255A8EF700D45B23 /* Delicatessen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delicatessen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E3B98C255A8EF700D45B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E3B993255A8EF700D45B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +55,6 @@
 		91E3B998255A8EFB00D45B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E3B99A255A8EFB00D45B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E3B99F255A8EFB00D45B23 /* DelicatessenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelicatessenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91E3B9A3255A8EFB00D45B23 /* DelicatessenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelicatessenTests.swift; sourceTree = "<group>"; };
 		91E3B9A5255A8EFB00D45B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E3B9B0255A8F8C00D45B23 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		91E3B9B2255A8FA100D45B23 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
@@ -84,9 +88,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		911C38A1255DBA8F00458662 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				911C389F255DBA8900458662 /* MapViewModelTests.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		911C38A2255DBA9F00458662 /* ShopDescription */ = {
+			isa = PBXGroup;
+			children = (
+				911C389D255DBA4200458662 /* ShopDescriptionViewModelTests.swift */,
+			);
+			path = ShopDescription;
+			sourceTree = "<group>";
+		};
+		91D0665F255DCBAB002922AC /* PresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				91DCB13D255C49E700395EA0 /* SetSizePresentationController.swift */,
+			);
+			path = PresentationController;
+			sourceTree = "<group>";
+		};
 		91DCB138255AFBCD00395EA0 /* ShopDescription */ = {
 			isa = PBXGroup;
 			children = (
+				91D0665F255DCBAB002922AC /* PresentationController */,
 				91DCB139255AFBF100395EA0 /* ShopDescriptionViewController.swift */,
 				91DCB13B255AFC2C00395EA0 /* ShopDescriptionViewModel.swift */,
 			);
@@ -127,7 +156,8 @@
 		91E3B9A2255A8EFB00D45B23 /* DelicatessenTests */ = {
 			isa = PBXGroup;
 			children = (
-				91E3B9A3255A8EFB00D45B23 /* DelicatessenTests.swift */,
+				911C38A1255DBA8F00458662 /* Map */,
+				911C38A2255DBA9F00458662 /* ShopDescription */,
 				91E3B9A5255A8EFB00D45B23 /* Info.plist */,
 			);
 			path = DelicatessenTests;
@@ -311,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DCB13E255C49E700395EA0 /* SetSizePresentationController.swift in Sources */,
 				91E3B9C5255A90EA00D45B23 /* RequestCancellationToken.swift in Sources */,
 				91E3B9B1255A8F8C00D45B23 /* Coordinator.swift in Sources */,
 				91E3B9C8255A918400D45B23 /* MapCoordinator.swift in Sources */,
@@ -334,7 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E3B9A4255A8EFB00D45B23 /* DelicatessenTests.swift in Sources */,
+				911C38A0255DBA8900458662 /* MapViewModelTests.swift in Sources */,
+				911C389E255DBA4200458662 /* ShopDescriptionViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YBSB9J6FK;
+				DEVELOPMENT_TEAM = SPYXZN2GGQ;
 				INFOPLIST_FILE = Delicatessen/Ressources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,7 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YBSB9J6FK;
+				DEVELOPMENT_TEAM = SPYXZN2GGQ;
 				INFOPLIST_FILE = Delicatessen/Ressources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

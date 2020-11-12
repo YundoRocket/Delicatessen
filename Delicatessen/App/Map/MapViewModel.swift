@@ -12,7 +12,7 @@ final class MapViewModel {
 
     // MARK: - Privates Properties
 
-    private let action: Actions
+    private let actions: Actions
 
     struct Actions {
         let didPresentShopDescription: VoidClosure
@@ -21,9 +21,9 @@ final class MapViewModel {
     // MARK: - Init
 
     init(
-        action: Actions
+        actions: Actions
     ) {
-        self.action = action
+        self.actions = actions
     }
 
     // MARK: - Outputs
@@ -38,6 +38,6 @@ final class MapViewModel {
     }
 
     func didSelectShopDescription() {
-        action.didPresentShopDescription() 
+        actions.didPresentShopDescription() 
     }
 }
