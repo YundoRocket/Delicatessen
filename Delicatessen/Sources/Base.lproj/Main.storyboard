@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -216,6 +217,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtD-oq-Ieh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="582.60869565217399" y="773.4375"/>
+        </scene>
+        <!--Categories View Controller-->
+        <scene sceneID="s3Q-Dp-S7O">
+            <objects>
+                <viewController storyboardIdentifier="CategoriesViewController" id="cbh-qQ-8A3" customClass="CategoriesViewController" customModule="Delicatessen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="An9-Gm-RBT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wNx-Ig-dEw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="5OB-49-ijA"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCell" id="UW0-Vh-hvf" customClass="CategoriesCell" customModule="Delicatessen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Opa-TL-Yt2">
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="201" height="50"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wNx-Ig-dEw" firstAttribute="leading" secondItem="DzA-oH-0uH" secondAttribute="leading" id="A2z-zi-r8F"/>
+                            <constraint firstItem="wNx-Ig-dEw" firstAttribute="top" secondItem="DzA-oH-0uH" secondAttribute="top" id="IRp-zx-Bts"/>
+                            <constraint firstItem="DzA-oH-0uH" firstAttribute="trailing" secondItem="wNx-Ig-dEw" secondAttribute="trailing" id="XPD-2V-PfO"/>
+                            <constraint firstItem="DzA-oH-0uH" firstAttribute="bottom" secondItem="wNx-Ig-dEw" secondAttribute="bottom" id="iZd-kp-sAx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DzA-oH-0uH"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="wNx-Ig-dEw" id="fSp-sB-VtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nl-7P-rbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582.60869565217399" y="1472.5446428571429"/>
         </scene>
     </scenes>
 </document>

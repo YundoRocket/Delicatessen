@@ -121,9 +121,9 @@
 			children = (
 				91B016F8255DF1130092D8B6 /* Custom View */,
 				91B016F9255DF1230092D8B6 /* Model */,
-				91B016FC255DF18B0092D8B6 /* CategoriesDataSource.swift */,
 				91B016FA255DF18B0092D8B6 /* CategoriesViewController.swift */,
 				91B016FB255DF18B0092D8B6 /* CategoriesViewModel.swift */,
+				91B016FC255DF18B0092D8B6 /* CategoriesDataSource.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -230,10 +230,10 @@
 		91E3B9B4255A8FB700D45B23 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				91B016F7255DF1030092D8B6 /* Categories */,
 				91E3B9C6255A917700D45B23 /* Navigation */,
 				91E3B9C9255A91E100D45B23 /* Map */,
 				91DCB138255AFBCD00395EA0 /* ShopDescription */,
+				91B016F7255DF1030092D8B6 /* Categories */,
 			);
 			path = App;
 			sourceTree = "<group>";

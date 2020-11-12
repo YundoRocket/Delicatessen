@@ -190,6 +190,7 @@ final class ShopDescriptionViewController: UIViewController {
    
 
     @IBAction private func didSelectPlaceAnOrderButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
         viewModel.didSelectPlaceAnOrder()
     }
 }
