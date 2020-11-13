@@ -1,4 +1,5 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-
-module.exports = router
+const merchants = require("../controllers/merchants");
+router.get("/merchants", merchants.merchants);
+module.exports = router;
