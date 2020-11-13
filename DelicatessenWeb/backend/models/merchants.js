@@ -11,6 +11,7 @@ const merchantsSchema = new Schema({
     type: { type: String },
     coordinates: [Number]
   },
-  img: String
+  img: String,
+  email: String
 });
 module.exports = mongoose.model("merchants", merchantsSchema);
