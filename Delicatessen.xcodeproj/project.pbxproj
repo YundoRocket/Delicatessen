@@ -131,8 +131,8 @@
 		91B016F8255DF1130092D8B6 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
-				91B01702255DF1A20092D8B6 /* CategoriesCell.swift */,
 				91B01703255DF1A20092D8B6 /* CategoriesCell.xib */,
+				91B01702255DF1A20092D8B6 /* CategoriesCell.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";

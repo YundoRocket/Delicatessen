@@ -107,9 +107,7 @@ final class MapViewController: UIViewController {
 
 }
 
-extension MapViewController: CLLocationManagerDelegate {
-
-}
+extension MapViewController: CLLocationManagerDelegate {}
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(
