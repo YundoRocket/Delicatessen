@@ -23,7 +23,8 @@ public class Screens {
 extension Screens {
     func createMapViewController(actions: MapViewModel.Actions) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        let viewModel = MapViewModel(actions: actions)
+        let repository = MapRepository(client: context.client)
+        let viewModel = MapViewModel(repository: repository, actions: actions)
         viewController.viewModel = viewModel
         return viewController
     }
