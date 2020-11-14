@@ -14,12 +14,14 @@ final class CartViewModel {
     
     var cartText: InputClosure<String>?
     var validateTheOrderText: InputClosure<String>?
+    var product: InputClosure<[Product]>?
     
     // MARK: - Inputs
     
     func viewDidLoad() {
         cartText?("Mon panier")
-        validateTheOrderText?("Valider laa commande")
+        validateTheOrderText?("Valider la commande")
+        product?([Product(categoryImage: "Barley", name: "Spaghetti", quantity: "500gr"), Product(categoryImage: "Fruits", name: "Pomme", quantity: "1kg"), Product(categoryImage: "Cheeses", name: "Comté", quantity: "500gr")])
     }
     
     func didPressValidateTheOrder() {

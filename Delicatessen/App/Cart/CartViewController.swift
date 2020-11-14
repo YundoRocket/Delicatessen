@@ -10,6 +10,10 @@ import UIKit
 
 final class CartViewController: UIViewController {
     
+    // MARK: - Privates Properties
+    
+    private lazy var dataSource = CartDataSources()
+    
     // MARK: - Properties
 
     var viewModel: CartViewModel!
@@ -21,10 +25,13 @@ final class CartViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
     @IBOutlet weak private var validateTheOrderButton: UIButton!
+
     // MARK: - View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = dataSource
+        tableView.delegate = dataSource
         bint(to: viewModel)
         viewModel.viewDidLoad()
         
@@ -42,6 +49,13 @@ final class CartViewController: UIViewController {
         viewModel.validateTheOrderText = { [weak self] text in
             DispatchQueue.main.async {
                 self?.validateTheOrderButton.setTitle(text, for: .normal)
+            }
+        }
+        
+        viewModel.product = { [weak self] item in
+            DispatchQueue.main.async {
+                self?.dataSource.update(with: item)
+                self?.tableView.reloadData()
             }
         }
     }

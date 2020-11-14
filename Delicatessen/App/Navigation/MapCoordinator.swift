@@ -60,7 +60,7 @@ final class MapCoordinator {
     }
     
     private func showCart() {
-        let viewController = screens.createCategoriesViewController()
+        let viewController = screens.createCartViewController()
         presenter.showDetailViewController(viewController, sender: self)
     }
 }
