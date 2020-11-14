@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class Shop: NSObject, MKAnnotation {
+final class Shop: NSObject, MKAnnotation {
     
     var title: String?
     var coordinate: CLLocationCoordinate2D
