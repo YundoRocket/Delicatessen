@@ -222,6 +222,104 @@
             </objects>
             <point key="canvasLocation" x="582.60869565217399" y="773.4375"/>
         </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="ZUF-Zj-dSN">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="6oL-Bv-SOK" customClass="CartViewController" customModule="Delicatessen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dl8-nT-4hj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon panier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moe-3j-Gzm">
+                                <rect key="frame" x="149.5" y="44" width="115" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jUD-Rp-6PI">
+                                <rect key="frame" x="0.0" y="102.5" width="414" height="694.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartTableViewCell" rowHeight="67" id="YVP-L7-IxZ" customClass="CartTableViewCell" customModule="Delicatessen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YVP-L7-IxZ" id="raT-zp-HGb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="7Wj-fv-gh7">
+                                                    <rect key="frame" x="30" y="0.0" width="354" height="67"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D86-QS-rEP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="66.5" height="67"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jambon blanc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjJ-9U-rax">
+                                                            <rect key="frame" x="144.5" y="0.0" width="90" height="67"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150gr" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-Us-12G">
+                                                            <rect key="frame" x="312.5" y="0.0" width="41.5" height="67"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Wj-fv-gh7" firstAttribute="leading" secondItem="raT-zp-HGb" secondAttribute="leading" constant="30" id="GQJ-ga-EAT"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Wj-fv-gh7" secondAttribute="bottom" id="TdT-q3-As4"/>
+                                                <constraint firstItem="7Wj-fv-gh7" firstAttribute="top" secondItem="raT-zp-HGb" secondAttribute="top" id="jqF-Oi-ALW"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Wj-fv-gh7" secondAttribute="trailing" constant="30" id="qI4-zA-Q5Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImageView" destination="D86-QS-rEP" id="9c0-e2-kKJ"/>
+                                            <outlet property="nameLabel" destination="fjJ-9U-rax" id="GUO-kh-ktn"/>
+                                            <outlet property="quantityLabel" destination="HFV-Us-12G" id="v4s-Ys-Nem"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzj-Qi-1OW">
+                                <rect key="frame" x="124.5" y="822" width="165" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="rOd-Kd-xmd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Valider la commande">
+                                    <color key="titleColor" red="0.066666666666666666" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressValidateMyOrderButton:" destination="6oL-Bv-SOK" eventType="touchUpInside" id="rIQ-XC-cnE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wzj-Qi-1OW" firstAttribute="centerX" secondItem="Dl8-nT-4hj" secondAttribute="centerX" id="4c0-uV-klA"/>
+                            <constraint firstItem="Wzj-Qi-1OW" firstAttribute="top" secondItem="jUD-Rp-6PI" secondAttribute="bottom" constant="25" id="PIc-DR-06E"/>
+                            <constraint firstItem="jUD-Rp-6PI" firstAttribute="trailing" secondItem="s98-P9-Thz" secondAttribute="trailing" id="alZ-Ox-u2H"/>
+                            <constraint firstItem="Moe-3j-Gzm" firstAttribute="centerX" secondItem="Dl8-nT-4hj" secondAttribute="centerX" id="gSF-Wn-iR5"/>
+                            <constraint firstItem="jUD-Rp-6PI" firstAttribute="leading" secondItem="s98-P9-Thz" secondAttribute="leading" id="jbL-TJ-uG8"/>
+                            <constraint firstItem="Wzj-Qi-1OW" firstAttribute="bottom" secondItem="s98-P9-Thz" secondAttribute="bottom" id="kHP-aJ-hAX"/>
+                            <constraint firstItem="jUD-Rp-6PI" firstAttribute="top" secondItem="Moe-3j-Gzm" secondAttribute="bottom" constant="20" id="sAH-om-bbr"/>
+                            <constraint firstItem="Moe-3j-Gzm" firstAttribute="top" secondItem="s98-P9-Thz" secondAttribute="top" id="vuP-Pd-u1c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s98-P9-Thz"/>
+                    </view>
+                    <connections>
+                        <outlet property="myCartLabel" destination="Moe-3j-Gzm" id="9Zo-rg-cI3"/>
+                        <outlet property="tableView" destination="jUD-Rp-6PI" id="xid-Yb-HuA"/>
+                        <outlet property="validateMyOrderButton" destination="Wzj-Qi-1OW" id="3v4-1b-OyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsD-je-4qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.68115942029" y="772.76785714285711"/>
+        </scene>
         <!--Categories View Controller-->
         <scene sceneID="s3Q-Dp-S7O">
             <objects>

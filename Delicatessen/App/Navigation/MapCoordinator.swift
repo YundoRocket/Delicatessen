@@ -33,6 +33,8 @@ final class MapCoordinator {
         let actions: MapViewModel.Actions = .init(
             didPresentShopDescription: {
                 self.showShopDescription()
+        }, didPresentCart: {
+            self.showCart()
         })
         mapViewController = screens.createMapViewController(actions: actions)
         guard let mapViewController = mapViewController else { return }
@@ -55,5 +57,11 @@ final class MapCoordinator {
         let viewController = screens.createCategoriesViewController()
         presenter.pushViewController(viewController,
                                      animated: true)
+    }
+    
+    private func showCart() {
+        let viewController = screens.createCartViewController()
+        presenter.showDetailViewController(viewController,
+                                           sender: self)
     }
 }
