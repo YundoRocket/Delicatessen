@@ -21,7 +21,9 @@ final class CartViewModel {
     func viewDidLoad() {
         cartText?("Mon panier")
         validateTheOrderText?("Valider la commande")
-        product?([Product(categoryImage: "Barley", name: "Spaghetti", quantity: "500gr"), Product(categoryImage: "Fruits", name: "Pomme", quantity: "1kg"), Product(categoryImage: "Cheeses", name: "Comté", quantity: "500gr")])
+        product?([Product(categoryImage: "Barley", name: "Spaghetti", quantity: "500gr"),
+                  Product(categoryImage: "Fruits", name: "Pomme", quantity: "1kg"),
+                  Product(categoryImage: "Cheeses", name: "Comté", quantity: "500gr")])
     }
     
     func didPressValidateTheOrder() {
