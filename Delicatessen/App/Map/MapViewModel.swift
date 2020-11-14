@@ -16,6 +16,7 @@ final class MapViewModel {
 
     struct Actions {
         let didPresentShopDescription: VoidClosure
+        let didPresentCart: VoidClosure
     }
 
     // MARK: - Init
@@ -39,5 +40,9 @@ final class MapViewModel {
 
     func didSelectShopDescription() {
         actions.didPresentShopDescription() 
+    }
+    
+    func didSelectCart() {
+        actions.didPresentCart()
     }
 }

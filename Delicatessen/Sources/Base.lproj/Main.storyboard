@@ -218,6 +218,71 @@
             </objects>
             <point key="canvasLocation" x="582.60869565217399" y="773.4375"/>
         </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="xGw-P7-j4j">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="tDg-8w-x0n" customClass="CartViewController" customModule="Delicatessen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqI-Bg-dFP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon panier " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe9-r8-2Vy">
+                                <rect key="frame" x="149.5" y="44" width="115" height="37"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SYi-VI-e0Y">
+                                <rect key="frame" x="0.0" y="104" width="414" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bdu-0m-F0J">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdu-0m-F0J" id="FQj-HR-YSF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJS-bO-pYV">
+                                <rect key="frame" x="116" y="819" width="182" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="O7Z-KQ-kOt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                <state key="normal" title="Valider la commande">
+                                    <color key="titleColor" red="0.065025636240000004" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressValidateTheOrderButton:" destination="tDg-8w-x0n" eventType="touchUpInside" id="bTL-pL-EiN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SYi-VI-e0Y" firstAttribute="leading" secondItem="gF5-Fw-dXX" secondAttribute="leading" id="2ui-H8-lfs"/>
+                            <constraint firstItem="Xe9-r8-2Vy" firstAttribute="centerX" secondItem="xqI-Bg-dFP" secondAttribute="centerX" id="FwU-QW-TmY"/>
+                            <constraint firstItem="iJS-bO-pYV" firstAttribute="centerX" secondItem="xqI-Bg-dFP" secondAttribute="centerX" id="M7A-os-6PE"/>
+                            <constraint firstItem="SYi-VI-e0Y" firstAttribute="top" secondItem="Xe9-r8-2Vy" secondAttribute="bottom" constant="23" id="OTV-Vt-U2l"/>
+                            <constraint firstItem="iJS-bO-pYV" firstAttribute="top" secondItem="SYi-VI-e0Y" secondAttribute="bottom" constant="23" id="b9v-ci-czd"/>
+                            <constraint firstItem="iJS-bO-pYV" firstAttribute="bottom" secondItem="gF5-Fw-dXX" secondAttribute="bottom" id="ihK-G2-xAa"/>
+                            <constraint firstItem="Xe9-r8-2Vy" firstAttribute="top" secondItem="gF5-Fw-dXX" secondAttribute="top" id="lDA-8Y-g0Q"/>
+                            <constraint firstItem="SYi-VI-e0Y" firstAttribute="trailing" secondItem="gF5-Fw-dXX" secondAttribute="trailing" id="xQg-0D-6bW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gF5-Fw-dXX"/>
+                    </view>
+                    <connections>
+                        <outlet property="myCartLabel" destination="Xe9-r8-2Vy" id="OWT-ez-qSa"/>
+                        <outlet property="tableView" destination="SYi-VI-e0Y" id="EGG-1a-tKr"/>
+                        <outlet property="validateTheOrderButton" destination="iJS-bO-pYV" id="nY4-sa-tD9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPA-ex-Nn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="772.76785714285711"/>
+        </scene>
         <!--Categories View Controller-->
         <scene sceneID="s3Q-Dp-S7O">
             <objects>
@@ -258,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nl-7P-rbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582.60869565217399" y="1472.5446428571429"/>
+            <point key="canvasLocation" x="583" y="1512"/>
         </scene>
     </scenes>
 </document>

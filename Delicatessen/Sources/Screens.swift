@@ -46,3 +46,12 @@ extension Screens {
         return viewController
     }
 }
+
+extension Screens {
+    func createCartViewController() -> UIViewController {
+        let viewController = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        let viewModel = CartViewModel()
+        viewController.viewModel = viewModel
+        return viewController
+    }
+}

@@ -32,6 +32,7 @@ final class MapViewController: UIViewController {
         mapView.delegate = self
         bind(to: viewModel)
         viewModel.viewDidLoad()
+        setUI()
         checkUserLocactionService()
 
         let carrefour = Shop(title: "Carrefour Contact", coordinate: CLLocationCoordinate2D(latitude: 46.268362, longitude: 6.367100), subtitle: nil)
@@ -39,9 +40,15 @@ final class MapViewController: UIViewController {
         let lemanGrocery = Shop(title: "Épicerie du léman", coordinate: CLLocationCoordinate2D(latitude: 46.263605, longitude: 6.368636), subtitle: nil)
         
         mapView.addAnnotations([carrefour, casino, lemanGrocery])
+        
     }
 
     // MARK: - Helpers
+    
+    private func setUI() {
+        navigationItem.setRightBarButton(self.addCartButton(action: #selector(didPressCartButton)),
+                                         animated: true)
+    }
 
     private func bind(to viewModel: MapViewModel) {
         viewModel.searchBarPlaceholder = { [weak self] placeholder in
@@ -101,6 +108,10 @@ final class MapViewController: UIViewController {
         @unknown default:
             fatalError()
         }
+    }
+    
+    @objc private func didPressCartButton() {
+        viewModel.didSelectCart()
     }
 
     // MARK: - Actions

@@ -29,3 +29,12 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+extension UIViewController {
+    func addCartButton(action: Selector?) -> UIBarButtonItem {
+        let cartButton = UIBarButtonItem(image: UIImage(systemName: "cart"),
+                                            style: .done, target: self, action: action)
+        cartButton.tintColor = .black
+        return cartButton
+    }
+}
