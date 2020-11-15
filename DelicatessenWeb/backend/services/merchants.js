@@ -9,7 +9,6 @@ const retrieveAllMerchants = async () => {
     throw new Error(error.message);
   }
 };
-
 module.exports = {
   retrieveAllMerchants
 };
