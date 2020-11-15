@@ -51,7 +51,6 @@ final class MapViewModel {
                 else { return }
             
             self.shops?([Shop(title: merchant.merchants.first?.tag, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), subtitle: merchant.merchants.first?.merchantDescription), Shop(title: merchant.merchants.last?.tag, coordinate: CLLocationCoordinate2D(latitude: latitudeL, longitude: longitudeL), subtitle: merchant.merchants.last?.merchantDescription)])
-            
         }
     }
 

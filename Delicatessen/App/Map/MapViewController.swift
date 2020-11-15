@@ -52,7 +52,6 @@ final class MapViewController: UIViewController {
 
         viewModel.shops = { [weak self] shops in
             DispatchQueue.main.async {
-                print(shops)
                 self?.mapView.addAnnotations(shops)
             }
         }
