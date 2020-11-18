@@ -1,8 +1,7 @@
 # Documentation API
 
 > Welcome to Delicatessen API!
-> Access URL (soon)
-> _Everything_ is going according to **plan**.
+> Temporary access URL http://http://134.209.113.122/ > _Everything_ is going according to **plan**.
 
 ---
 
@@ -54,10 +53,7 @@ GET /api/groups
               "name": { "en": "apple", "fr": "pomme", "de": "apfel" },
               "image": "http://www.nutritiondesseniors.fr/wp-content/uploads/2017/01/Orange-Fruit-Pieces.jpg"
             },
-            {
-              "name": { "en": "orange", "fr": "orange", "de": "orange" },
-              "image": "http://www.nutritiondesseniors.fr/wp-content/uploads/2017/01/Orange-Fruit-Pieces.jpg"
-            }
+            ...
           ]
         }
       ]
