@@ -12,6 +12,16 @@ const merchantsSchema = new Schema({
     coordinates: [Number]
   },
   img: String,
-  email: String
+  email: String,
+  phone: Number,
+  timesheet: {
+    monday: String,
+    tuesday: String,
+    wednesday: String,
+    thursday: String,
+    friday: String,
+    saturday: String,
+    sunday: String
+  }
 });
 module.exports = mongoose.model("merchants", merchantsSchema);
