@@ -1,7 +1,8 @@
 # Documentation API
 
-> Welcome to Delicatessen API!
-> Temporary access URL http://http://134.209.113.122/ > _Everything_ is going according to **plan**.
+> - Welcome to Delicatessen API!
+> - Temporary access URL http://134.209.113.122
+> - _Everything_ is going according to **plan**.
 
 ---
 
