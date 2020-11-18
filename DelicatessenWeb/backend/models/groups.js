@@ -14,7 +14,7 @@ const groupsSchema = new Schema({
         fr: { type: String, required: true }
       },
       image: { type: String, required: true },
-      product: [
+      products: [
         {
           name: {
             en: { type: String, required: true },
