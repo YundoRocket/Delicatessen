@@ -2,7 +2,7 @@ require("dotenv").config();
 const { retrieveAllCategories } = require("../services/categories");
 
 exports.categories = async (req, res) => {
-  let;
+  let categories;
   try {
     categories = await retrieveAllCategories();
   } catch (error) {
