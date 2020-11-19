@@ -12,7 +12,7 @@
 GET /api/merchants
 ```
 
-### Result
+### Response
 
 ```
 {
@@ -37,7 +37,7 @@ GET /api/merchants
 GET /api/groups
 ```
 
-### Result
+### Response
 
 ```
 {
@@ -61,5 +61,72 @@ GET /api/groups
     },
     ...
   ]
+}
+```
+
+### Add a new product
+
+```
+POST /api/insert-product
+```
+
+###### Body Parameters
+
+> - **groupsName** string _required_
+> - **categoryName** string _required_
+> - **name** object _required_
+>   - **en** string _required_
+>   - **fr** string _required_
+>   - **de** string _required_
+> - **image** string _required_
+
+### Request
+
+```
+{
+	"groupsName": "food",
+	"categoryName": "fruit",
+	"name":{
+		"en":"banana",
+		"fr": "banane",
+		"de": "banane"
+	},
+	"image":"https://banane.png"
+}
+```
+
+### Response
+
+```
+{
+    "product": {
+        "name": {
+            "en": "food",
+            "fr": "aliment",
+            "de": "lebensmittel"
+        },
+        "_id": "5fb50757b0012a55171e4aa5",
+        "categories": [
+            {
+                "name": {
+                    "en": "fruit",
+                    "fr": "fruit",
+                    "de": "obst"
+                },
+                "image": "http://www.nutritiondesseniors.fr/wp-content/uploads/2017/01/Orange-Fruit-Pieces.jpg",
+                "products": [
+                    {
+                        "name": {
+                            "en": "apple",
+                            "fr": "pomme",
+                            "de": "apfel"
+                        },
+                        "image": "http://www.nutritiondesseniors.fr/wp-content/uploads/2017/01/Orange-Fruit-Pieces.jpg"
+                    },
+                    ...
+                ]
+            }
+        ]
+    }
 }
 ```
