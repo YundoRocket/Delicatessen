@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ValidateOrderView" customModule="Delicatessen" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmButton" destination="hWY-ZC-xzo" id="ncc-7q-ddS"/>
+                <outlet property="descriptionLabel" destination="Xmr-3s-m5K" id="KHt-rF-yt0"/>
+                <outlet property="emailTextField" destination="Piw-8U-8xq" id="27p-ME-nHe"/>
+                <outlet property="nameTextField" destination="r4K-Cb-AcA" id="S3w-Vy-6tz"/>
+                <outlet property="phoneNumberTextField" destination="u1h-BC-wKl" id="Gsi-JC-RP9"/>
+                <outlet property="validateOrderLabel" destination="F2L-Pj-Pih" id="FF6-Am-Qmm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rRv-X7-R9A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-23-8bq">
+                    <rect key="frame" x="55" y="67" width="304" height="226"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous êtes sur le point de valider votre commande veuillez remplir vos informations pour le commerçant " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmr-3s-m5K">
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="82"/>
+                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4K-Cb-AcA">
+                            <rect key="frame" x="0.0" y="96" width="304" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="304" id="3NS-C9-Mgy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numéro de téléphone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-BC-wKl">
+                            <rect key="frame" x="0.0" y="144" width="304" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="304" id="k3h-vU-yjS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="adresse mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Piw-8U-8xq">
+                            <rect key="frame" x="0.0" y="192" width="304" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="304" id="9KO-Ib-nxE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valider la commande" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2L-Pj-Pih">
+                    <rect key="frame" x="120.5" y="15" width="173.5" height="32"/>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWY-ZC-xzo">
+                    <rect key="frame" x="157" y="337" width="100" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="e2g-o8-QMc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                    <state key="normal" title="Confirmer">
+                        <color key="titleColor" red="0.065025636240000004" green="0.31281877930000002" blue="0.15632417400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressConfirmButton:" destination="-1" eventType="touchUpInside" id="2RU-4L-5ED"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="hWY-ZC-xzo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0SB-IT-Zbt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hWY-ZC-xzo" secondAttribute="bottom" constant="20" id="15Q-om-ZYX"/>
+                <constraint firstItem="F2L-Pj-Pih" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="1B8-la-l9p"/>
+                <constraint firstItem="KuX-23-8bq" firstAttribute="top" secondItem="F2L-Pj-Pih" secondAttribute="bottom" constant="20" id="Vh2-yw-ddj"/>
+                <constraint firstItem="KuX-23-8bq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bZ6-w3-4Dv"/>
+                <constraint firstItem="F2L-Pj-Pih" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rwI-lF-FXX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,27 @@
+{
+  "name": "delicatessen-web",
+  "version": "1.0.0",
+  "description": "Api of delicatessen",
+  "main": "index.js",
+  "repository": "https://github.com/Dams2/Delicatessen",
+  "author": "0xantman",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js --watch server",
+    "start": "cross-env NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "mongoose": "^5.10.13",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  }
+}
