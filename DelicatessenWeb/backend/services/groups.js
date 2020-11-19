@@ -17,26 +17,29 @@ const insertProductInGroups = async (groupsName, categoryName, name, image) => {
   console.log(data);
 
   try {
-    //check if groups and category exist
+    //retrieve group and category
     const categorieAlreadyExist = await Groups.findOne({
       "name.en": groupsName,
       "categories.name.en": categoryName
     });
-    console.log("is existing?");
-    console.log(categorieAlreadyExist);
+    //retrieve product
     const productAlreadyExist = await Groups.findOne({
       "categories.name.en": categoryName,
       "categories.products.name.en": name.en
     });
+    //check if groups and category already exist
     if (!categorieAlreadyExist)
       throw new Error(
         "Error this group or category do not exist contact admin to create it for you"
       );
+    //check if product already exist
     if (productAlreadyExist)
       throw new Error("Error this product already exist");
-    //insert the data
+
+    //insert the data and save to DB
     categorieAlreadyExist.categories[0].products.push(data);
     categorieAlreadyExist.save();
+
     return categorieAlreadyExist;
   } catch (error) {
     console.log(error);

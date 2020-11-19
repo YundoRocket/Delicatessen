@@ -2,8 +2,8 @@
 
 Create a .env file in your root project and add
 
-> - MONGO_DB_URI=yourMongoDB_uri
-> - API_KEY=yourAPI_KEY
+> - MONGO_DB_URI=your-mongoDB-uri
+> - API_KEY=your-api-key
 
 # Documentation API
 

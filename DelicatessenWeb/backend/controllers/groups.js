@@ -20,10 +20,6 @@ exports.insertProduct = async (req, res) => {
   const { groupsName, categoryName, name, image } = req.body;
   const { apiKey } = req.params;
 
-  console.log(apiKey);
-  console.log(groupsName);
-  console.log(req.body);
-
   let product;
   try {
     if (apiKey !== process.env.API_KEY) throw new Error("Wrong Api key");
