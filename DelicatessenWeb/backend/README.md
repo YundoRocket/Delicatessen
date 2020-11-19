@@ -1,3 +1,10 @@
+# Installation
+
+Create a .env file in your root project and add
+
+> - MONGO_DB_URI=yourMongoDB_uri
+> - API_KEY=yourAPI_KEY
+
 # Documentation API
 
 > - Welcome to Delicatessen API!
@@ -67,7 +74,7 @@ GET /api/groups
 ### Add a new product
 
 ```
-POST /api/insert-product
+POST /api/insert-product/:apiKey
 ```
 
 ###### Body Parameters

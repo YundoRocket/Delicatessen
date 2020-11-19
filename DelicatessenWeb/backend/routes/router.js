@@ -7,6 +7,6 @@ const groups = require("../controllers/groups");
 //routes
 router.get("/merchants", merchants.merchants);
 router.get("/groups", groups.groups);
-router.post("/insert-product", groups.insertProduct);
+router.post("/insert-product/:apiKey", groups.insertProduct);
 
 module.exports = router;
