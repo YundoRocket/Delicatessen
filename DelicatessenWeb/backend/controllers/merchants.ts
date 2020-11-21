@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { retrieveAllMerchants } = require("../services/merchants");
 
-exports.merchants = async (req, res) => {
+exports.merchants = async (req: any, res: any) => {
   let merchants;
   try {
     merchants = await retrieveAllMerchants();

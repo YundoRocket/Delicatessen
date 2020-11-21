@@ -1,10 +1,12 @@
 require("dotenv").config();
+import {INSERT_PRODUCT_GROUPS} from "../interfaces/app_interface"
+
 const {
   retrieveAllGroups,
   insertProductInGroups
 } = require("../services/groups");
 
-exports.groups = async (req, res) => {
+exports.groups = async (req: any, res: any) => {
   let groups;
   try {
     groups = await retrieveAllGroups();
@@ -16,8 +18,8 @@ exports.groups = async (req, res) => {
   }
 };
 
-exports.insertProduct = async (req, res) => {
-  const { groupsName, categoryName, name, image } = req.body;
+exports.insertProduct = async (req: any, res: any) => {
+  const { groupsName, categoryName, name, image } : INSERT_PRODUCT_GROUPS = req.body;
   const { apiKey } = req.params;
 
   let product;

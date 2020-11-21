@@ -1,3 +1,4 @@
+export {}
 const Merchants = require("../models/merchants");
 
 const retrieveAllMerchants = async () => {
