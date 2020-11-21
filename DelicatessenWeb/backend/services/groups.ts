@@ -1,5 +1,4 @@
 const Groups = require("../models/groups");
-import {INSERT_PRODUCT_GROUPS} from "../interfaces/app_interface"
 const retrieveAllGroups = async () => {
   try {
     const groupsData = await Groups.find();
@@ -9,7 +8,7 @@ const retrieveAllGroups = async () => {
     throw new Error(error.message);
   }
 };
-const insertProductInGroups = async (groupsName: string, categoryName: string,  name: any, image: string) :Promise<any> => {
+const insertProductInGroups = async (groupsName: string, categoryName: string,  name: {en: string, fr: string, de: string}, image: string) => {
   const data = {
     name,
     image
