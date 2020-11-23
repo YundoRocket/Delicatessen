@@ -15,6 +15,8 @@
 		9122D4DC25616CD80084D6A5 /* ValidateOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122D4DB25616CD80084D6A5 /* ValidateOrderView.swift */; };
 		9122D4DE256455AE0084D6A5 /* ShopDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122D4DD256455AE0084D6A5 /* ShopDescriptionViewModel.swift */; };
 		9122D4E0256485F90084D6A5 /* ValidateOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122D4DF256485F90084D6A5 /* ValidateOrderViewModel.swift */; };
+		913AEF26256C608B0047484D /* MockMerchantsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEF25256C608B0047484D /* MockMerchantsResponse.swift */; };
+		913AEF28256C60F40047484D /* MapRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEF27256C60F40047484D /* MapRepositoryTests.swift */; };
 		91A2A42425648DD300027B5B /* MapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A2A42325648DD300027B5B /* MapDataSource.swift */; };
 		91A2A4292564988400027B5B /* ValidateOrderViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A2A4282564988400027B5B /* ValidateOrderViewModelTest.swift */; };
 		91B016FD255DF18B0092D8B6 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B016FA255DF18B0092D8B6 /* CategoriesViewController.swift */; };
@@ -73,6 +75,8 @@
 		9122D4DB25616CD80084D6A5 /* ValidateOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateOrderView.swift; sourceTree = "<group>"; };
 		9122D4DD256455AE0084D6A5 /* ShopDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDescriptionViewModel.swift; sourceTree = "<group>"; };
 		9122D4DF256485F90084D6A5 /* ValidateOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateOrderViewModel.swift; sourceTree = "<group>"; };
+		913AEF25256C608B0047484D /* MockMerchantsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMerchantsResponse.swift; sourceTree = "<group>"; };
+		913AEF27256C60F40047484D /* MapRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepositoryTests.swift; sourceTree = "<group>"; };
 		91A2A42325648DD300027B5B /* MapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataSource.swift; sourceTree = "<group>"; };
 		91A2A4282564988400027B5B /* ValidateOrderViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateOrderViewModelTest.swift; sourceTree = "<group>"; };
 		91B016FA255DF18B0092D8B6 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				911C389F255DBA8900458662 /* MapViewModelTests.swift */,
+				913AEF27256C60F40047484D /* MapRepositoryTests.swift */,
+				913AEF25256C608B0047484D /* MockMerchantsResponse.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -560,7 +566,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913AEF26256C608B0047484D /* MockMerchantsResponse.swift in Sources */,
 				911C38A0255DBA8900458662 /* MapViewModelTests.swift in Sources */,
+				913AEF28256C60F40047484D /* MapRepositoryTests.swift in Sources */,
 				91A2A4292564988400027B5B /* ValidateOrderViewModelTest.swift in Sources */,
 				911C389E255DBA4200458662 /* ShopDescriptionViewModelTests.swift in Sources */,
 			);

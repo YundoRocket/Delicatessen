@@ -9,12 +9,12 @@
 import Foundation
 
 // MARK: - MerchantsResponse
-struct MerchantsResponse: Codable {
+struct MerchantsResponse: Codable, Equatable {
     let merchants: [Merchant]
 }
 
 // MARK: - Merchant
-struct Merchant: Codable {
+struct Merchant: Codable, Equatable {
     let loc: LOC
     let timesheet: Timesheet
     let id, tag, merchantDescription, address: String
@@ -32,13 +32,13 @@ struct Merchant: Codable {
 }
 
 // MARK: - LOC
-struct LOC: Codable {
+struct LOC: Codable, Equatable {
     let coordinates: [Double]
     let type: String
 }
 
 // MARK: - Timesheet
-struct Timesheet: Codable {
+struct Timesheet: Codable, Equatable {
     let monday, tuesday, wednesday, thursday: String
     let friday, saturday, sunday: String
 }
