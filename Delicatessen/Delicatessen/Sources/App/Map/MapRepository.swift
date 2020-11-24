@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DLNetwork
 
 protocol MapRepositoryType: class {
     func getMerchants(callback: @escaping (MerchantsResponse) -> Void)
@@ -15,7 +16,7 @@ protocol MapRepositoryType: class {
 final class MapRepository: MapRepositoryType {
     
     let client: HTTPClientType
-        
+
     let token = RequestCancellationToken()
 
     init(client: HTTPClientType) {
