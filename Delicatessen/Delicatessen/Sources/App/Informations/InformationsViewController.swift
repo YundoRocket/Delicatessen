@@ -16,14 +16,21 @@ final class InformationsViewController: UIViewController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak private var informationView: UIView!
+    @IBOutlet weak private var informationView: UIView! {
+        didSet {
+            informationView.layer.borderWidth = 0.5
+            informationView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            informationView.layer.cornerRadius = 20
+        }
+    }
     
     // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind(to: viewModel)
+        viewModel.viewDidLoad()
         setUI()
-        informationView.layer.cornerRadius = 20
     }
 
     // MARK: - Helpers
@@ -70,20 +77,6 @@ final class InformationsViewController: UIViewController {
             break
         }
     }
-    
-    // MARK: - Actions
-
-//    @IBAction private func didSelectPhoneNumberButton(_ sender: UIButton) {
-//        guard let phoneNumber = sender.titleLabel?.text else { return }
-//        guard let url = URL(string: "tel://\(phoneNumber)") else { return }
-//        UIApplication.shared.open(url, options:[:], completionHandler: nil)
-//    }
-//   
-//
-//    @IBAction private func didSelectPlaceAnOrderButton(_ sender: UIButton) {
-//        self.dismiss(animated: true, completion: nil)
-//        viewModel.didSelectPlaceAnOrder()
-//    }
 }
 
 extension InformationsViewController: UIViewControllerTransitioningDelegate {
