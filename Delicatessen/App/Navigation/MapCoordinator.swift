@@ -9,7 +9,7 @@
 import UIKit
 
 final class MapCoordinator {
-
+   
     // MARK: - Private Properties
 
     private let presenter: UINavigationController
@@ -54,14 +54,28 @@ final class MapCoordinator {
     }
     
     private func showCategories() {
-        let viewController = screens.createCategoriesViewController()
+        let action: CategoriesViewModel.Actions = .init(
+        didSelectCategory: { category in
+            self.showSubCategories(for: category)
+            
+        })
+        let viewController = screens.createCategoriesViewController(action: action)
+        presenter.pushViewController(viewController,
+                                     animated: true)
+    }
+    private func showSubCategories(for categorie: Categorie) {
+        let action: CategoriesViewModel.Actions = .init(
+        didSelectCategory: { _ in
+            })
+        let viewController = screens.createCategoriesViewController(action: action )
         presenter.pushViewController(viewController,
                                      animated: true)
     }
     
     private func showCart() {
-        let viewController = screens.createCartViewController()
-        presenter.showDetailViewController(viewController,
-                                           sender: self)
+//        let viewController = screens.createCartViewController()
+//        presenter.showDetailViewController(viewController,
+//                                           sender: self)
     }
 }
+
