@@ -317,10 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				91E3B9AE255A8F3A00D45B23 /* Sources */,
-				91E3B9B4255A8FB700D45B23 /* App */,
-				91E3B9B9255A903800D45B23 /* Commons */,
-				91E3B9BE255A906400D45B23 /* Extensions */,
-				91E3B9BF255A908300D45B23 /* Network */,
 				91E3B9AF255A8F4200D45B23 /* Ressources */,
 			);
 			path = Delicatessen;
@@ -340,12 +336,15 @@
 		91E3B9AE255A8F3A00D45B23 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				91E3B9B4255A8FB700D45B23 /* App */,
 				91E3B98C255A8EF700D45B23 /* AppDelegate.swift */,
 				91E3B9B0255A8F8C00D45B23 /* Coordinator.swift */,
 				91E3B9B7255A900A00D45B23 /* Screens.swift */,
 				91E3B9B2255A8FA100D45B23 /* Context.swift */,
 				2F1E0911256D09F400F9115B /* Main.storyboard */,
 				91E3B9B5255A8FE800D45B23 /* MainCoordinator.swift */,
+				91E3B9B9255A903800D45B23 /* Commons */,
+				91E3B9BE255A906400D45B23 /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -384,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				91E3B9BC255A905E00D45B23 /* Extensions.swift */,
+				91E3B9BF255A908300D45B23 /* Network */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
