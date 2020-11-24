@@ -24,7 +24,10 @@ extension Screens {
     func createMapViewController(actions: MapViewModel.Actions) -> UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         let repository = MapRepository(client: context.client)
-        let viewModel = MapViewModel(repository: repository, actions: actions)
+        let viewModel = MapViewModel(
+            repository: repository,
+            actions: actions
+        )
         viewController.viewModel = viewModel
         return viewController
     }
@@ -32,7 +35,7 @@ extension Screens {
 
 extension Screens {
     func createShopDescriptionViewController(actions: InformationsViewModel.Actions) -> UIViewController {
-        let viewController = storyboard.instantiateViewController(identifier: "InformationsViewController") as! InformationsViewController
+        let viewController = storyboard.instantiateViewController(identifier: "ShopDescriptionViewController") as! InformationsViewController
         let viewModel = InformationsViewModel(actions: actions)
         viewController.viewModel = viewModel
         return viewController
@@ -40,18 +43,9 @@ extension Screens {
 }
 
 extension Screens {
-    func createCategoriesViewController() -> UIViewController {
+    func createCategoriesViewController(action: CategoriesViewModel.Actions) -> UIViewController {
         let viewController = storyboard.instantiateViewController(identifier: "CategoriesViewController") as! CategoriesViewController
-        let viewModel = CategoriesViewModel()
-        viewController.viewModel = viewModel
-        return viewController
-    }
-}
-
-extension Screens {
-    func createCartViewController() -> UIViewController {
-        let viewController = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
-        let viewModel = CartViewModel()
+        let viewModel = CategoriesViewModel(action: action)
         viewController.viewModel = viewModel
         return viewController
     }

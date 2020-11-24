@@ -10,38 +10,58 @@ import Foundation
 
 final class CategoriesViewModel {
 
-    private var _categories: [Categories] = []
-
     // MARK: - Properties
-
-
+    
+    private var categories: [Categorie] = [] {
+        didSet {
+            heading?(categories)
+        }
+    }
+    
+    private let action: Actions
+    
+    struct Actions {
+        
+        let didSelectCategory: (Categorie) -> Void
+        
+    }
+    
     // MARK: - Initializer
+
+    init(action: Actions) {
+        
+        self.action = action
+        
+    }
 
     // MARK: - Outputs
 
-    var categories: (([Categories]) -> Void)?
+    var heading: InputClosure<[Categorie]>?
 
     // MARK: - Inputs
 
     func viewDidLoad() {
-        categories?([Categories(title: "Barley", image: "Barley")])
-//        [Categories(title: "Barley", image: #imageLiteral(resourceName: "Barley.png")),
-//        Categories(title: "Biscuits", image: #imageLiteral(resourceName: "Biscuits")),
-//        Categories(title: "Cheeses", image: #imageLiteral(resourceName: "Cheeses")),
-//        Categories(title: "Cleaning", image: #imageLiteral(resourceName: "Cleaning")),
-//        Categories(title: "Delicatessen", image: #imageLiteral(resourceName: "Delicatessen")),
-//        Categories(title: "Drink", image: #imageLiteral(resourceName: "Drink")),
-//        Categories(title: "Eggs", image: #imageLiteral(resourceName: "Eggs")),
-//        Categories(title: "Flour", image: #imageLiteral(resourceName: "Flour")),
-//        Categories(title: "Frozen", image: #imageLiteral(resourceName: "Frozen")),
-//        Categories(title: "Fruits", image: #imageLiteral(resourceName: "Fruits")),
-//        Categories(title: "Hygiene", image: #imageLiteral(resourceName: "Hygiene")),
-//        Categories(title: "Meat", image: #imageLiteral(resourceName: "Meat")),
-//        Categories(title: "Milk", image: #imageLiteral(resourceName: "Milk")),
-//        Categories(title: "Pets", image: #imageLiteral(resourceName: "Pets")),
-//        Categories(title: "Spices", image: #imageLiteral(resourceName: "Spices")),
-//        Categories(title: "Vegetables", image: #imageLiteral(resourceName: "Vegetables"))]
+        categories = [Categorie(image: #imageLiteral(resourceName: "Hygiene")),
+            Categorie(image: #imageLiteral(resourceName: "Barley.png")),
+            Categorie(image: #imageLiteral(resourceName: "Biscuits")),
+            Categorie(image: #imageLiteral(resourceName: "Cheeses")),
+            Categorie(image: #imageLiteral(resourceName: "Cleaning")),
+            Categorie(image: #imageLiteral(resourceName: "Delicatessen")),
+            Categorie(image: #imageLiteral(resourceName: "Drink")),
+            Categorie(image: #imageLiteral(resourceName: "Eggs")),
+            Categorie(image: #imageLiteral(resourceName: "Flour")),
+            Categorie(image: #imageLiteral(resourceName: "Frozen")),
+            Categorie(image: #imageLiteral(resourceName: "Fruits")),
+            Categorie(image: #imageLiteral(resourceName: "Meat")),
+            Categorie(image: #imageLiteral(resourceName: "Milk")),
+            Categorie(image: #imageLiteral(resourceName: "Pets")),
+            Categorie(image: #imageLiteral(resourceName: "Spices")),
+            Categorie(image: #imageLiteral(resourceName: "Vegetables"))]
     }
-
+    func didSelectCategorie(at index: Int) {
+        guard categories.indices.contains(index) else { return }
+        let categorie = categories[index]
+        action.didSelectCategory(categorie)
+    }
 }
 
