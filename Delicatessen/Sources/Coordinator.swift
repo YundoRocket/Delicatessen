@@ -10,9 +10,12 @@ import UIKit
 
 final class Coordinator {
 
+    // MARK: - Properties
+
     private unowned var appDelegate: AppDelegate
-    private var mainCoordinator: MainCoordinator?
     private let context: Context
+
+    private var mainCoordinator: MainCoordinator?
 
     // MARK: - Initializer
 
@@ -21,7 +24,7 @@ final class Coordinator {
         self.context = context
     }
 
-    // MARK: - Coordinator
+    // MARK: - Start
 
     func start() {
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)

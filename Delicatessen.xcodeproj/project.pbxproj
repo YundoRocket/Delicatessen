@@ -188,17 +188,9 @@
 		91A2A4252564984700027B5B /* Informations */ = {
 			isa = PBXGroup;
 			children = (
-				91A2A4262564985A00027B5B /* ShopDescription */,
 				91A2A4272564986500027B5B /* ValidateOrder */,
 			);
 			path = Informations;
-			sourceTree = "<group>";
-		};
-		91A2A4262564985A00027B5B /* ShopDescription */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ShopDescription;
 			sourceTree = "<group>";
 		};
 		91A2A4272564986500027B5B /* ValidateOrder */ = {
