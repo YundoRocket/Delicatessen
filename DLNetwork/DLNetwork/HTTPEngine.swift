@@ -1,6 +1,6 @@
 //
 //  HTTPEngine.swift
-//  Delicatessen
+//  DLNetwork
 //
 //  Created by Damien Rojo on 10.11.20.
 //  Copyright © 2020 Chimere.io LTD. All rights reserved.
@@ -8,21 +8,21 @@
 
 import Foundation
 
-typealias HTTPCompletionHander = (Data?, HTTPURLResponse?, Error?) -> Void
+public typealias HTTPCompletionHander = (Data?, HTTPURLResponse?, Error?) -> Void
 
-enum URLSessionEngineError: Error {
+public enum URLSessionEngineError: Error {
     case invalideURLResponseType
 }
 
-final class HTTPEngine {
+open class HTTPEngine {
     
     private let session: URLSession
     
-    init(configuration: URLSessionConfiguration = .default) {
+    public init(configuration: URLSessionConfiguration = .default) {
         self.session = URLSession(configuration: configuration)
     }
     
-    func send(request: URLRequest,
+    open func send(request: URLRequest,
               cancelledBy token: RequestCancellationToken,
               callback: @escaping HTTPCompletionHander) {
         

@@ -1,6 +1,6 @@
 //
 //  HTTPClient.swift
-//  Delicatessen
+//  DLNetwork
 //
 //  Created by Damien Rojo on 10.11.20.
 //  Copyright © 2020 Chimere.io LTD. All rights reserved.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum RequestType: String {
+public enum RequestType: String {
     case GET = "GET"
     case POST = "POST"
 }
 
-protocol HTTPClientType: class {
+public protocol HTTPClientType: class {
     func request<T>(type: T.Type,
                     requestType: RequestType,
                     url: URL,
@@ -21,7 +21,7 @@ protocol HTTPClientType: class {
                     completion: @escaping (T) -> Void) where T : Decodable, T : Encodable
 }
 
-final class HTTPClient: HTTPClientType {
+open class HTTPClient: HTTPClientType {
     
     // MARK: - Privates Properties
 
@@ -30,14 +30,14 @@ final class HTTPClient: HTTPClientType {
 
     // MARK: - Init
 
-    init(engine: HTTPEngine) {
+    public init(engine: HTTPEngine) {
         self.engine = engine
         self.jsonDecoder = JSONDecoder()
     }
 
     // MARK: - Helpers
 
-    func request<T>(type: T.Type,
+    open func request<T>(type: T.Type,
                     requestType: RequestType,
                     url: URL,
                     cancelledBy token: RequestCancellationToken,
