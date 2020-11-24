@@ -74,6 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="D1z-Si-ru2"/>
                     </view>
                     <connections>
+                        <outlet property="informationView" destination="Qs1-mc-nTd" id="jiB-we-eAh"/>
                         <outlet property="view" destination="Qs1-mc-nTd" id="bGb-pK-Rzj"/>
                     </connections>
                 </viewController>

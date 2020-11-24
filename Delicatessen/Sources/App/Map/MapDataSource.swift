@@ -13,38 +13,44 @@ import CoreLocation
 final class MapDataSource: NSObject, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // MARK: - Privates Properties
+    
+    var locationManager: CLLocationManager
+    var didSelectAnnotation: VoidClosure?
+    
+    // MARK: - Init
 
-    var viewModel: MapViewModel!
-    
-    let locationManager = CLLocationManager()
-    
+    override init() {
+        self.locationManager = CLLocationManager()
+        super.init()
+        self.locationManager.delegate = self
+    }
+     
     func mapView(
-           _ mapView: MKMapView,
-           viewFor annotation: MKAnnotation
-       ) -> MKAnnotationView? {
-           guard annotation is ShopAnnotation else { return nil }
+        _ mapView: MKMapView,
+        viewFor annotation: MKAnnotation
+    ) -> MKAnnotationView? {
+        guard annotation is ShopAnnotation else { return nil }
+        let identifier = "Shops"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+           annotationView = MKPinAnnotationView(annotation: annotation,
+                                                reuseIdentifier: identifier)
+           annotationView?.canShowCallout = true
            
-           let identifier = "Shops"
-           var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-           
-           if annotationView == nil {
-               annotationView = MKPinAnnotationView(annotation: annotation,
-                                                    reuseIdentifier: identifier)
-               annotationView?.canShowCallout = true
-               
-               let button = UIButton(type: .detailDisclosure)
-               annotationView?.rightCalloutAccessoryView = button
-           } else {
-               annotationView?.annotation = annotation
-           }
-           
-           return annotationView
-       }
-       
-       func mapView(_ mapView: MKMapView,
-                    annotationView view: MKAnnotationView,
-                    calloutAccessoryControlTapped control: UIControl
-       ) {
-        viewModel.didSelectShopDescription()
-       }
+           let button = UIButton(type: .detailDisclosure)
+           annotationView?.rightCalloutAccessoryView = button
+        } else {
+           annotationView?.annotation = annotation
+        }
+
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl
+    ) {
+        didSelectAnnotation?()
+    }
 }

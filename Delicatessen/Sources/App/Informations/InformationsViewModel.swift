@@ -15,9 +15,15 @@ final class InformationsViewModel {
     private let actions: Actions
     
     struct Actions {
-        let didPresentShopDescription: VoidClosure
+        let didPresentAlert: (AlertConfiguration) -> Void
+        let didPresentPlaceAnOrder: VoidClosure
     }
     
+    private var currentConfiguration: InformationsConfiguration = .shopDescription {
+        didSet {
+            configuration?(currentConfiguration)
+        }
+    }
     enum InformationsConfiguration {
         case shopDescription, validateOrder
     }
@@ -37,7 +43,13 @@ final class InformationsViewModel {
     // MARK: - Inputs
     
     func viewDidLoad() {
-        
+        DispatchQueue.main.async {
+            self.actions.didPresentAlert(AlertConfiguration(title: "Attention",
+                                                            message: "",
+                                                            okMessage: "ok",
+                                                            cancelMessage: ""))
+            self.currentConfiguration = .shopDescription
+        }
     }
     
     // MARK: - Helpers
@@ -47,7 +59,7 @@ final class InformationsViewModel {
     }
     
     func didPressPlaceAnOrder() {
-        actions.didPresentShopDescription()
+        actions.didPresentPlaceAnOrder()
     }
     
     func didPressConfirm() {

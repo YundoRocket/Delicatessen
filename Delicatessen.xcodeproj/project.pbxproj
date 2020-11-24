@@ -19,6 +19,8 @@
 		9122D4E0256485F90084D6A5 /* ValidateOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9122D4DF256485F90084D6A5 /* ValidateOrderViewModel.swift */; };
 		913AEF26256C608B0047484D /* MockMerchantsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEF25256C608B0047484D /* MockMerchantsResponse.swift */; };
 		913AEF28256C60F40047484D /* MapRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AEF27256C60F40047484D /* MapRepositoryTests.swift */; };
+		91596737256D562800E83246 /* AlertConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596736256D562800E83246 /* AlertConfiguration.swift */; };
+		91596739256D563D00E83246 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91596738256D563D00E83246 /* AlertType.swift */; };
 		91A2A42425648DD300027B5B /* MapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A2A42325648DD300027B5B /* MapDataSource.swift */; };
 		91A2A4292564988400027B5B /* ValidateOrderViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A2A4282564988400027B5B /* ValidateOrderViewModelTest.swift */; };
 		91B016FD255DF18B0092D8B6 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B016FA255DF18B0092D8B6 /* CategoriesViewController.swift */; };
@@ -79,6 +81,8 @@
 		9122D4DF256485F90084D6A5 /* ValidateOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateOrderViewModel.swift; sourceTree = "<group>"; };
 		913AEF25256C608B0047484D /* MockMerchantsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMerchantsResponse.swift; sourceTree = "<group>"; };
 		913AEF27256C60F40047484D /* MapRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRepositoryTests.swift; sourceTree = "<group>"; };
+		91596736256D562800E83246 /* AlertConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfiguration.swift; sourceTree = "<group>"; };
+		91596738256D563D00E83246 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		91A2A42325648DD300027B5B /* MapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataSource.swift; sourceTree = "<group>"; };
 		91A2A4282564988400027B5B /* ValidateOrderViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateOrderViewModelTest.swift; sourceTree = "<group>"; };
 		91B016FA255DF18B0092D8B6 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,15 @@
 				9122D4DF256485F90084D6A5 /* ValidateOrderViewModel.swift */,
 			);
 			path = ValidateOrder;
+			sourceTree = "<group>";
+		};
+		91596735256D560E00E83246 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				91596736256D562800E83246 /* AlertConfiguration.swift */,
+				91596738256D563D00E83246 /* AlertType.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		91A2A4252564984700027B5B /* Informations */ = {
@@ -328,13 +341,13 @@
 		91E3B9AE255A8F3A00D45B23 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				91E3B9B4255A8FB700D45B23 /* App */,
 				91E3B98C255A8EF700D45B23 /* AppDelegate.swift */,
 				91E3B9B0255A8F8C00D45B23 /* Coordinator.swift */,
 				91E3B9B7255A900A00D45B23 /* Screens.swift */,
 				91E3B9B2255A8FA100D45B23 /* Context.swift */,
 				2F1E0911256D09F400F9115B /* Main.storyboard */,
 				91E3B9B5255A8FE800D45B23 /* MainCoordinator.swift */,
+				91E3B9B4255A8FB700D45B23 /* App */,
 				91E3B9B9255A903800D45B23 /* Commons */,
 				91E3B9BE255A906400D45B23 /* Extensions */,
 			);
@@ -355,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				91E3B9C6255A917700D45B23 /* Navigation */,
+				91596735256D560E00E83246 /* Alert */,
 				91E3B9C9255A91E100D45B23 /* Map */,
 				91DCB138255AFBCD00395EA0 /* Informations */,
 				91B016F7255DF1030092D8B6 /* Categories */,
@@ -527,8 +541,10 @@
 				91E3B9BD255A905E00D45B23 /* Extensions.swift in Sources */,
 				91E3B9BB255A904700D45B23 /* Closures.swift in Sources */,
 				91DCB13A255AFBF100395EA0 /* InformationsViewController.swift in Sources */,
+				91596739256D563D00E83246 /* AlertType.swift in Sources */,
 				9122D4DE256455AE0084D6A5 /* ShopDescriptionViewModel.swift in Sources */,
 				91E3B9B6255A8FE800D45B23 /* MainCoordinator.swift in Sources */,
+				91596737256D562800E83246 /* AlertConfiguration.swift in Sources */,
 				9122D4DA25616C940084D6A5 /* ShopDescriptionView.swift in Sources */,
 				9122D4E0256485F90084D6A5 /* ValidateOrderViewModel.swift in Sources */,
 				91E3B9CB255A91F800D45B23 /* MapViewController.swift in Sources */,

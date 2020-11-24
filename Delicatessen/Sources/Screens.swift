@@ -34,8 +34,8 @@ extension Screens {
 }
 
 extension Screens {
-    func createShopDescriptionViewController(actions: InformationsViewModel.Actions) -> UIViewController {
-        let viewController = storyboard.instantiateViewController(identifier: "ShopDescriptionViewController") as! InformationsViewController
+    func createInformationsViewController(actions: InformationsViewModel.Actions) -> UIViewController {
+        let viewController = storyboard.instantiateViewController(identifier: "InformationsViewController") as! InformationsViewController
         let viewModel = InformationsViewModel(actions: actions)
         viewController.viewModel = viewModel
         return viewController
@@ -48,5 +48,27 @@ extension Screens {
         let viewModel = CategoriesViewModel(action: action)
         viewController.viewModel = viewModel
         return viewController
+    }
+}
+
+extension Screens {
+    func createCartViewController() -> UIViewController {
+        let viewController = storyboard.instantiateViewController(identifier: "CartViewController") as! CartViewController
+        let viewModel = CartViewModel()
+        viewController.viewModel = viewModel
+        return viewController
+    }
+}
+
+extension Screens {
+    func createAlert(with configuration: AlertConfiguration) -> UIAlertController {
+        let alertController = UIAlertController()        
+        alertController.title = configuration.title
+        alertController.message = configuration.message
+        let action = UIAlertAction(title: configuration.okMessage,
+                                   style: .default,
+                                   handler: nil)
+        alertController.addAction(action)
+        return alertController
     }
 }

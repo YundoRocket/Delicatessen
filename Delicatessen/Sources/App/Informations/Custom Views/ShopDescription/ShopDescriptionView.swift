@@ -16,7 +16,14 @@ class ShopDescriptionView: UIView {
 
     // MARK: - Outlets
 
-    @IBOutlet private var view: UIView!
+    @IBOutlet private var view: UIView! {
+            didSet {
+                view.layer.borderWidth = 0.5
+                view.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                view.layer.cornerRadius = 20
+            }
+        }
+
     @IBOutlet weak private var shopNameLabel: UILabel!
     @IBOutlet weak private var shopAddressLabel: UILabel!
 

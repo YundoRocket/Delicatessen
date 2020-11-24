@@ -33,6 +33,7 @@ final class MapViewController: UIViewController {
         bind(to: viewModel)
         viewModel.viewDidLoad()
         setUI()
+        bind(to: dataSource)
     }
 
     // MARK: - Helpers
@@ -59,6 +60,11 @@ final class MapViewController: UIViewController {
                 self?.mapView.addAnnotations(shopsAnnotations)
             }
         }
+    }
+    
+    private func bind(to dataSource: MapDataSource) {
+        dataSource.didSelectAnnotation = { self.viewModel.didSelectShopDescription() }
+            
     }
 
     private func setUpLocationManager() {

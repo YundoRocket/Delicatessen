@@ -13,8 +13,8 @@ final class MapCoordinator {
     // MARK: - Private Properties
 
     private let presenter: UINavigationController
-    private var mapViewController: UIViewController?
     private let screens: Screens
+    private var informationsViewController: UIViewController?
 
     // MARK: - Initializer
 
@@ -32,21 +32,24 @@ final class MapCoordinator {
     private func showMap() {
         let actions: MapViewModel.Actions = .init(
             didPresentShopDescription: {
-            self.showShopDescription()
+            self.showInformations()
         }, didPresentCart: {
             self.showCart()
         })
-        mapViewController = screens.createMapViewController(actions: actions)
-        guard let mapViewController = mapViewController else { return }
+        let mapViewController = screens.createMapViewController(actions: actions)
         presenter.viewControllers = [mapViewController]
     }
     
-    private func showShopDescription() {
+    private func showInformations() {
         let actions: InformationsViewModel.Actions =  .init(
-            didPresentShopDescription: {
+            didPresentAlert: { alert in
+                self.didPresentAlert(for: .alert(alertConfiguration: alert))
+
+        },
+            didPresentPlaceAnOrder: {
                 self.showCategories()
         })
-        let viewController = screens.createShopDescriptionViewController(actions: actions)
+        let viewController = screens.createInformationsViewController(actions: actions)
         viewController.modalPresentationStyle = .overCurrentContext
         viewController.modalTransitionStyle = .coverVertical
         presenter.showDetailViewController(viewController,
@@ -73,9 +76,18 @@ final class MapCoordinator {
     }
     
     private func showCart() {
-//        let viewController = screens.createCartViewController()
-//        presenter.showDetailViewController(viewController,
-//                                           sender: self)
+        let viewController = screens.createCartViewController()
+        presenter.showDetailViewController(viewController,
+                                           sender: self)
+    }
+    
+    func didPresentAlert(for alert: AlertType) {
+        switch alert {
+        case .alert(alertConfiguration: let configuration):
+            let alertController = screens.createAlert(with: configuration)
+            informationsViewController?.present(alertController,
+                                        animated: true)
+        }
     }
 }
 
