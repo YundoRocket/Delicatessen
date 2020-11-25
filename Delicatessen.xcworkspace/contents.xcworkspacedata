@@ -5,6 +5,9 @@
       location = "group:Delicatessen/Delicatessen.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DLCommons/DLCommons.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DLNetwork/DLNetwork.xcodeproj">
    </FileRef>
 </Workspace>

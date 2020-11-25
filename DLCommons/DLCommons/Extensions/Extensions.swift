@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     public static var storyboardIdentifier: String {
         return String(describing: self)
     }
@@ -18,20 +18,20 @@ extension UIView {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
 
-    @objc func dismissKeyboard() {
+    @objc public  func dismissKeyboard() {
         view.endEditing(true)
     }
 }
 
-extension UIViewController {
-    func cartButtonitem(action: Selector?) -> UIBarButtonItem {
+public extension UIViewController {
+    public func cartButtonitem(action: Selector?) -> UIBarButtonItem {
         let cart = UIBarButtonItem(image: UIImage(systemName: "cart"),
                                             style: .done,
                                             target: self,
