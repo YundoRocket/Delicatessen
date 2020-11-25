@@ -9,11 +9,11 @@
 import UIKit
 
 public extension UIView {
-    public static var storyboardIdentifier: String {
+    static var storyboardIdentifier: String {
         return String(describing: self)
     }
 
-    public static var nib: UINib {
+    static var nib: UINib {
         return UINib.init(nibName: storyboardIdentifier, bundle: Bundle(for: self))
     }
 }
@@ -25,13 +25,13 @@ public extension UIViewController {
         view.addGestureRecognizer(tap)
     }
 
-    @objc public  func dismissKeyboard() {
+    @objc  func dismissKeyboard() {
         view.endEditing(true)
     }
 }
 
 public extension UIViewController {
-    public func cartButtonitem(action: Selector?) -> UIBarButtonItem {
+    func cartButtonitem(action: Selector?) -> UIBarButtonItem {
         let cart = UIBarButtonItem(image: UIImage(systemName: "cart"),
                                             style: .done,
                                             target: self,

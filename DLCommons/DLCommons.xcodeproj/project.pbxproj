@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F282C1E256E8B1A00955402 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F282C1D256E8B1A00955402 /* LayoutAnchor.swift */; };
 		2F698381256E6BEC00F53EA0 /* DLCommons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F698377256E6BEC00F53EA0 /* DLCommons.framework */; };
-		2F698386256E6BEC00F53EA0 /* DLCommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F698385256E6BEC00F53EA0 /* DLCommonsTests.swift */; };
 		2F698388256E6BEC00F53EA0 /* DLCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F69837A256E6BEC00F53EA0 /* DLCommons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F698399256E6C5500F53EA0 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F698398256E6C5500F53EA0 /* Closures.swift */; };
+		2F9C2541256E8B8400C7215E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6983A0256E6C8800F53EA0 /* Extensions.swift */; };
+		2F9C2545256E8BB600C7215E /* LayoutAnchorProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C2544256E8BB600C7215E /* LayoutAnchorProperty.swift */; };
+		2F9C2549256E8BC500C7215E /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C2548256E8BC500C7215E /* LayoutDimension.swift */; };
+		2F9C254D256E8BD300C7215E /* LayoutDimensionProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C254C256E8BD300C7215E /* LayoutDimensionProperty.swift */; };
+		2F9C2551256E8BE200C7215E /* LayoutOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C2550256E8BE200C7215E /* LayoutOperators.swift */; };
+		2F9C2555256E8BF000C7215E /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C2554256E8BF000C7215E /* LayoutProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,14 +30,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F282C1D256E8B1A00955402 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
 		2F698377256E6BEC00F53EA0 /* DLCommons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLCommons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F69837A256E6BEC00F53EA0 /* DLCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCommons.h; sourceTree = "<group>"; };
 		2F69837B256E6BEC00F53EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F698380256E6BEC00F53EA0 /* DLCommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLCommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F698385256E6BEC00F53EA0 /* DLCommonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCommonsTests.swift; sourceTree = "<group>"; };
 		2F698387256E6BEC00F53EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F698398256E6C5500F53EA0 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		2F6983A0256E6C8800F53EA0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2F9C2544256E8BB600C7215E /* LayoutAnchorProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchorProperty.swift; sourceTree = "<group>"; };
+		2F9C2548256E8BC500C7215E /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
+		2F9C254C256E8BD300C7215E /* LayoutDimensionProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimensionProperty.swift; sourceTree = "<group>"; };
+		2F9C2550256E8BE200C7215E /* LayoutOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOperators.swift; sourceTree = "<group>"; };
+		2F9C2554256E8BF000C7215E /* LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F282C1C256E8AEC00955402 /* Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				2F282C1D256E8B1A00955402 /* LayoutAnchor.swift */,
+				2F9C2544256E8BB600C7215E /* LayoutAnchorProperty.swift */,
+				2F9C2548256E8BC500C7215E /* LayoutDimension.swift */,
+				2F9C254C256E8BD300C7215E /* LayoutDimensionProperty.swift */,
+				2F9C2550256E8BE200C7215E /* LayoutOperators.swift */,
+				2F9C2554256E8BF000C7215E /* LayoutProxy.swift */,
+			);
+			path = Autolayout;
+			sourceTree = "<group>";
+		};
 		2F69836D256E6BEC00F53EA0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +98,7 @@
 		2F698379256E6BEC00F53EA0 /* DLCommons */ = {
 			isa = PBXGroup;
 			children = (
+				2F282C1C256E8AEC00955402 /* Autolayout */,
 				2F6983A1256E6C8800F53EA0 /* Extensions */,
 				2F698398256E6C5500F53EA0 /* Closures.swift */,
 				2F6983A2256E6C9200F53EA0 /* Ressources */,
@@ -84,7 +109,6 @@
 		2F698384256E6BEC00F53EA0 /* DLCommonsTests */ = {
 			isa = PBXGroup;
 			children = (
-				2F698385256E6BEC00F53EA0 /* DLCommonsTests.swift */,
 				2F698387256E6BEC00F53EA0 /* Info.plist */,
 			);
 			path = DLCommonsTests;
@@ -215,7 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F282C1E256E8B1A00955402 /* LayoutAnchor.swift in Sources */,
+				2F9C2549256E8BC500C7215E /* LayoutDimension.swift in Sources */,
+				2F9C2551256E8BE200C7215E /* LayoutOperators.swift in Sources */,
+				2F9C2541256E8B8400C7215E /* Extensions.swift in Sources */,
+				2F9C2555256E8BF000C7215E /* LayoutProxy.swift in Sources */,
 				2F698399256E6C5500F53EA0 /* Closures.swift in Sources */,
+				2F9C2545256E8BB600C7215E /* LayoutAnchorProperty.swift in Sources */,
+				2F9C254D256E8BD300C7215E /* LayoutDimensionProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F698386256E6BEC00F53EA0 /* DLCommonsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
