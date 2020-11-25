@@ -373,7 +373,6 @@
 				2F1E0911256D09F400F9115B /* Main.storyboard */,
 				91E3B9B5255A8FE800D45B23 /* MainCoordinator.swift */,
 				91E3B9B4255A8FB700D45B23 /* App */,
-				91E3B9B9255A903800D45B23 /* Commons */,
 				91E3B9BE255A906400D45B23 /* Extensions */,
 			);
 			path = Sources;
@@ -400,13 +399,6 @@
 				91D1ACCF2560837200EA661E /* CartView */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		91E3B9B9255A903800D45B23 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Commons;
 			sourceTree = "<group>";
 		};
 		91E3B9BE255A906400D45B23 /* Extensions */ = {
