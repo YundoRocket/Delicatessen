@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F05A3DD256E8DFF006C5141 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 2F05A3DC256E8DFF006C5141 /* SnapshotTesting */; };
 		2F1E090A256D087100F9115B /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E0909256D087000F9115B /* Categorie.swift */; };
 		2F1E0912256D09F400F9115B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1E0911256D09F400F9115B /* Main.storyboard */; };
 		2F5F20CA256D6491001ADD23 /* DLNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5F20C9256D6491001ADD23 /* DLNetwork.framework */; };
@@ -142,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F05A3DD256E8DFF006C5141 /* SnapshotTesting in Frameworks */,
 				2F5F20CA256D6491001ADD23 /* DLNetwork.framework in Frameworks */,
 				2F698394256E6BF700F53EA0 /* DLCommons.framework in Frameworks */,
 			);
@@ -448,6 +450,9 @@
 			dependencies = (
 			);
 			name = Delicatessen;
+			packageProductDependencies = (
+				2F05A3DC256E8DFF006C5141 /* SnapshotTesting */,
+			);
 			productName = Delicatessen;
 			productReference = 91E3B989255A8EF700D45B23 /* Delicatessen.app */;
 			productType = "com.apple.product-type.application";
@@ -498,6 +503,9 @@
 				Base,
 			);
 			mainGroup = 91E3B980255A8EF700D45B23;
+			packageReferences = (
+				2F05A3DB256E8DFF006C5141 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 91E3B98A255A8EF700D45B23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -848,6 +856,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F05A3DB256E8DFF006C5141 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F05A3DC256E8DFF006C5141 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F05A3DB256E8DFF006C5141 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91E3B981255A8EF700D45B23 /* Project object */;
 }
