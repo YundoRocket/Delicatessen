@@ -21,11 +21,13 @@ final class CartViewController: UIViewController {
     private let viewIsLoaded = PublishSubject<Void>()
 
     private let tableView = UITableView()
+    private let dataSource: CartViewDataSource
 
     // MARK: - Init
 
     init(viewModel: CartViewModel) {
         self.viewModel = viewModel
+        self.dataSource = CartViewDataSource(tableView: tableView)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -50,9 +52,18 @@ final class CartViewController: UIViewController {
 
         outputs
             .title
-            .asDriver(onErrorJustReturn: "Test")
+            .asDriverOnErrorJustComplete()
             .drive(onNext: { [weak self] title in
                 self?.title = title
+            })
+            .disposed(by: disposeBag)
+
+        outputs
+            .items
+            .asDriverOnErrorJustComplete()
+            .drive(onNext: { [weak self] items in
+                self?.dataSource.update(items: items)
+                self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
     }
