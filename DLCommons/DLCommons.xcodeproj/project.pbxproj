@@ -11,6 +11,7 @@
 		2F698381256E6BEC00F53EA0 /* DLCommons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F698377256E6BEC00F53EA0 /* DLCommons.framework */; };
 		2F698388256E6BEC00F53EA0 /* DLCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F69837A256E6BEC00F53EA0 /* DLCommons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F698399256E6C5500F53EA0 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F698398256E6C5500F53EA0 /* Closures.swift */; };
+		2F864B02257638D000D96D31 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F864B01257638D000D96D31 /* UIStackView.swift */; };
 		2F9C2541256E8B8400C7215E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6983A0256E6C8800F53EA0 /* Extensions.swift */; };
 		2F9C2545256E8BB600C7215E /* LayoutAnchorProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C2544256E8BB600C7215E /* LayoutAnchorProperty.swift */; };
 		2F9C2549256E8BC500C7215E /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C2548256E8BC500C7215E /* LayoutDimension.swift */; };
@@ -38,6 +39,7 @@
 		2F698387256E6BEC00F53EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F698398256E6C5500F53EA0 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		2F6983A0256E6C8800F53EA0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2F864B01257638D000D96D31 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		2F9C2544256E8BB600C7215E /* LayoutAnchorProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchorProperty.swift; sourceTree = "<group>"; };
 		2F9C2548256E8BC500C7215E /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
 		2F9C254C256E8BD300C7215E /* LayoutDimensionProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimensionProperty.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		2F6983A1256E6C8800F53EA0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2F864B00257638C200D96D31 /* UIKit */,
 				2F6983A0256E6C8800F53EA0 /* Extensions.swift */,
 			);
 			path = Extensions;
@@ -129,6 +132,14 @@
 				2F69837B256E6BEC00F53EA0 /* Info.plist */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		2F864B00257638C200D96D31 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2F864B01257638D000D96D31 /* UIStackView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F282C1E256E8B1A00955402 /* LayoutAnchor.swift in Sources */,
+				2F864B02257638D000D96D31 /* UIStackView.swift in Sources */,
 				2F9C2549256E8BC500C7215E /* LayoutDimension.swift in Sources */,
 				2F9C2551256E8BE200C7215E /* LayoutOperators.swift in Sources */,
 				2F9C2541256E8B8400C7215E /* Extensions.swift in Sources */,

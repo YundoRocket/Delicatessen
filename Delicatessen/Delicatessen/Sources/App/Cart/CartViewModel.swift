@@ -12,10 +12,17 @@ import RxCocoa
 
 struct CartViewModel {
 
+    // MARK: - Properties
+
+    enum Item {
+        case product(ProductViewModel)
+    }
+
     // MARK: - Outputs
 
     struct Outputs {
         let title: Observable<String>
+        let items: Observable<[Item]>
     }
 
     // MARK: - Inputs
@@ -27,6 +34,6 @@ struct CartViewModel {
     // MARK: - Transform
 
     func transform(inputs: Inputs) -> Outputs {
-        return Outputs(title: .just("Coucou"))
+        return Outputs(title: .just("Coucou"), items: .just([.product(.init(name: "Lemon", price: "3€"))]))
     }
 }
