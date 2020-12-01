@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Delicatessen.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "91E3B99E255A8EFB00D45B23"
+               BuildableName = "DelicatessenTests.xctest"
+               BlueprintName = "DelicatessenTests"
+               ReferencedContainer = "container:Delicatessen.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

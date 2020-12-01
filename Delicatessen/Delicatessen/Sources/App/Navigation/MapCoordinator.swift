@@ -77,8 +77,10 @@ final class MapCoordinator {
     
     private func showCart() {
         let viewController = screens.createCartViewController()
-        presenter.showDetailViewController(viewController,
-                                           sender: self)
+        presenter.showDetailViewController(
+            UINavigationController(rootViewController: viewController),
+            sender: self
+        )
     }
     
     func didPresentAlert(for alert: AlertType) {
