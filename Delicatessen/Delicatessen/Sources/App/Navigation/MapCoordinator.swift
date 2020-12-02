@@ -57,23 +57,28 @@ final class MapCoordinator {
     }
     
     private func showCategories() {
-        let action: CategoriesViewModel.Actions = .init(
-        didSelectCategory: { category in
-            self.showSubCategories(for: category)
-            
-        })
-        let viewController = screens.createCategoriesViewController(action: action)
-        presenter.pushViewController(viewController,
-                                     animated: true)
+        let actions: CategoriesViewModel.Actions = .init(
+            selectSubcategory: { subcategory in
+                print(subcategory)
+            },
+            onQuit: {
+                // QUIT SCREEN HERE
+            }
+        )
+        let viewController = screens.createCategoriesViewController(actions: actions)
+        presenter.pushViewController(
+            viewController,
+            animated: true
+        )
     }
-    private func showSubCategories(for categorie: Categorie) {
-        let action: CategoriesViewModel.Actions = .init(
-        didSelectCategory: { _ in
-            })
-        let viewController = screens.createCategoriesViewController(action: action )
-        presenter.pushViewController(viewController,
-                                     animated: true)
-    }
+//    private func showSubCategories(for categorie: Category) {
+//        let actions: CategoriesViewModel.Actions = .init()
+//        let viewController = screens.createCategoriesViewController(actions: actions)
+//        presenter.pushViewController(
+//            viewController,
+//            animated: true
+//        )
+//    }
     
     private func showCart() {
         let viewController = screens.createCartViewController()

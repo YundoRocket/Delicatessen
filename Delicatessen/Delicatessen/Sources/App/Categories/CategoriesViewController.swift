@@ -36,17 +36,12 @@ final class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         bind(to: viewModel)
         //viewModel.viewDidLoad()
-        
     }
     
     private func bind(to viewModel: CategoriesViewModel) {
-        viewModel.categories = { [weak self] items in
-            DispatchQueue.main.async {
-                self?.dataSource.update(with: items)
-                self?.collectionView.reloadData()
-            }
-        }
+        
     }
+
     private func bind(to dataSource: CategoriesDataSource) {
         dataSource.didSelectItemAtIndex = viewModel.didSelectCategorie
     }

@@ -10,7 +10,7 @@ import UIKit
 
 public class MockCollectionViewController: UICollectionViewController {
 
-    public var cells: [UICollectionView] = [] {
+    public var cells: [UICollectionViewCell] = [] {
         didSet {
             collectionView.reloadData()
         }
@@ -29,7 +29,7 @@ public class MockCollectionViewController: UICollectionViewController {
         return 20
     }
 
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionView {
+    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return cells[indexPath.row]
     }
 }
