@@ -21,7 +21,8 @@ class CategoriesDataSource: NSObject, UICollectionViewDataSource, UICollectionVi
         super.init()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.storyboardIdentifier)
+        collectionView.register(CategoriesCollectionViewCell.nib, forCellWithReuseIdentifier: CategoriesCollectionViewCell.storyboardIdentifier)
+        collectionView.register(GroupCollectionReusableView.nib, forCellWithReuseIdentifier: GroupCollectionReusableView.storyboardIdentifier)
     }
     
     func update(with categories: [Categorie]) {
@@ -40,8 +41,10 @@ class CategoriesDataSource: NSObject, UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        guard items.indices.contains(indexPath.item) else { return UICollectionViewCell() }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.storyboardIdentifier,
-                                                      for: indexPath) as! CategoriesCell
+        //let header = collectionView.dequeueReusableSupplementaryView(ofKind: String, withReuseIdentifier: GroupCollectionReusableView.storyboardIdentifier, for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.storyboardIdentifier,
+                                                      for: indexPath) as! CategoriesCollectionViewCell
         cell.configure(with: items[indexPath.item])
         return cell
     }

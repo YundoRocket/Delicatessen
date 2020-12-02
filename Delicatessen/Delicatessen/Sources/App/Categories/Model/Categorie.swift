@@ -12,6 +12,8 @@ import UIKit
 
 struct Categorie {
 
+    let group: String
+    let title: String
     let image: UIImage
     
 }
