@@ -30,14 +30,9 @@ final class MapRepositoryTests: XCTestCase {
 
 final class MockHTTPClientType: HTTPClientType {
     
-    var result: MerchantsResponse!
-    
-    func request<T: Codable>(type: T.Type,
-                    requestType: RequestType,
-                    url: URL,
-                    cancelledBy token: RequestCancellationToken,
-                    completion: @escaping (T) -> Void) {
-        guard let result = result as? T else { return }
-        completion(result)
+    var result: Decodable!
+
+    func request<T>(requestType: RequestType, url: URL, cancelledBy token: RequestCancellationToken, completion: @escaping (Result<T, HTTPClientError>) -> Void) where T : Decodable {
+        completion(.success(result as! T))
     }
 }

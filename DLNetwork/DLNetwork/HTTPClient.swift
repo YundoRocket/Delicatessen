@@ -9,19 +9,27 @@
 import Foundation
 
 public enum RequestType: String {
-    case GET = "GET"
-    case POST = "POST"
+    case GET
+    case POST
+}
+
+public enum HTTPClientError: Error {
+    case unableToParseToJSON(Data)
+    case random
+    case missingData
+    case generic(Error)
 }
 
 public protocol HTTPClientType: class {
-    func request<T>(type: T.Type,
-        requestType: RequestType,
-        url: URL,
-        cancelledBy token: RequestCancellationToken,
-        completion: @escaping (T) -> Void) where T: Decodable, T: Encodable
+    func request<T: Decodable>(
+                    requestType: RequestType,
+                    url: URL,
+                    cancelledBy token: RequestCancellationToken,
+                    completion: @escaping (Result<T, HTTPClientError>) -> Void
+    )
 }
 
-open class HTTPClient: HTTPClientType {
+public class HTTPClient: HTTPClientType {
 
     // MARK: - Privates Properties
 
@@ -37,25 +45,35 @@ open class HTTPClient: HTTPClientType {
 
     // MARK: - Helpers
 
-    open func request<T>(type: T.Type,
+    public func request<T: Decodable>(
         requestType: RequestType,
         url: URL,
         cancelledBy token: RequestCancellationToken,
-        completion: @escaping (T) -> Void) where T: Codable {
+        completion: @escaping (Result<T, HTTPClientError>) -> Void
+    ) {
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
 
-        engine.send(request: request, cancelledBy: token, callback: { data, _, _ in
-            guard let data = data else { return }
-            self.decodeJSON(type: T.self, data: data, completion: completion)
-        })
+        engine.send(request: request, cancelledBy: token) { (data, _, error) in
+            if let error = error {
+                completion(.failure(.generic(error)))
+                return
+            } else if let data = data {
+                self.decodeJSON(data: data, completion: completion)
+            } else {
+                completion(.failure(.missingData))
+            }
+        }
     }
 
-    private func decodeJSON<T>(type: T.Type, data: Data, completion: @escaping (T) -> Void) where T: Codable {
-        guard let decodedData = try? jsonDecoder.decode(type.self, from: data) else {
-            print("Decoder was unable to decode: \(type.self)")
+    private func decodeJSON<T: Decodable>(
+        data: Data,
+        completion: @escaping (Result<T, HTTPClientError>) -> Void
+    ) {
+        guard let decodedData = try? jsonDecoder.decode(T.self, from: data) else {
+            completion(.failure(.unableToParseToJSON(data)))
             return
         }
-        completion(decodedData)
+        completion(.success(decodedData))
     }
 }

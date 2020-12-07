@@ -44,10 +44,14 @@ extension Screens {
 
 extension Screens {
     func createCategoriesViewController(actions: CategoriesViewModel.Actions) -> UIViewController {
-        let viewController = storyboard.instantiateViewController(identifier: "CategoriesViewController") as! CategoriesViewController
-        let viewModel = CategoriesViewModel(actions: actions)
-        viewController.viewModel = viewModel
-        return viewController
+        let repository = CategoriesRepository(
+            network: context.client
+        )
+        let viewModel = CategoriesViewModel(
+            actions: actions,
+            repository: repository
+        )
+        return CategoriesViewController(viewModel: viewModel)
     }
 }
 

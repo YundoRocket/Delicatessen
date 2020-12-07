@@ -16,36 +16,35 @@ struct CategoryResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case categories = "groups"
     }
-}
 
-// MARK: - Group
-struct Category: Codable {
-    let name: Name
-    let id: String
-    let categories: [SubCategory]
-
-    enum CodingKeys: String, CodingKey {
-        case name
-        case id = "_id"
-        case categories
-    }
-
-    // MARK: - Category
-    struct SubCategory: Codable {
+    // MARK: - Group
+    struct Category: Codable {
         let name: Name
-        let image: String
-        let products: [Product]
-    }
+        let id: String
+        let categories: [SubCategory]
 
-    // MARK: - Name
-    struct Name: Codable {
-        let en, fr, de: String
-    }
+        enum CodingKeys: String, CodingKey {
+            case name
+            case id = "_id"
+            case categories
+        }
 
-    // MARK: - Product
-    struct Product: Codable {
-        let name: Name
-        let image: String
-    }
+        // MARK: - Category
+        struct SubCategory: Codable {
+            let name: Name
+            let image: String
+            let products: [Product]
+        }
 
+        // MARK: - Name
+        struct Name: Codable {
+            let en, fr, de: String
+        }
+
+        // MARK: - Product
+        struct Product: Codable {
+            let name: Name
+            let image: String
+        }
+    }
 }

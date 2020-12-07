@@ -332,12 +332,12 @@
 		91B016F7255DF1030092D8B6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				91B016F8255DF1130092D8B6 /* Cell */,
 				DA24A867257E58FE001517A2 /* Model */,
 				DA24A865257E5844001517A2 /* CategoriesRepository.swift */,
 				91B016FC255DF18B0092D8B6 /* CategoriesDataSource.swift */,
 				91B016FA255DF18B0092D8B6 /* CategoriesViewController.swift */,
 				91B016FB255DF18B0092D8B6 /* CategoriesViewModel.swift */,
-				91B016F8255DF1130092D8B6 /* Cell */,
 				DA24A863257E55F3001517A2 /* ViewModel.swift */,
 			);
 			path = Categories;

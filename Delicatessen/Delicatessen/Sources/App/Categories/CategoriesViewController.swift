@@ -35,7 +35,7 @@ final class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind(to: viewModel)
-        //viewModel.viewDidLoad()
+        viewModel.viewDidLoad()
     }
     
     private func bind(to viewModel: CategoriesViewModel) {
@@ -54,5 +54,4 @@ final class CategoriesViewController: UIViewController {
             $0.fillSuperview()
         }
     }
-    
 }
