@@ -15,14 +15,14 @@ public enum RequestType: String {
 
 public protocol HTTPClientType: class {
     func request<T>(type: T.Type,
-                    requestType: RequestType,
-                    url: URL,
-                    cancelledBy token: RequestCancellationToken,
-                    completion: @escaping (T) -> Void) where T : Decodable, T : Encodable
+        requestType: RequestType,
+        url: URL,
+        cancelledBy token: RequestCancellationToken,
+        completion: @escaping (T) -> Void) where T: Decodable, T: Encodable
 }
 
 open class HTTPClient: HTTPClientType {
-    
+
     // MARK: - Privates Properties
 
     private let engine: HTTPEngine
@@ -38,10 +38,10 @@ open class HTTPClient: HTTPClientType {
     // MARK: - Helpers
 
     open func request<T>(type: T.Type,
-                    requestType: RequestType,
-                    url: URL,
-                    cancelledBy token: RequestCancellationToken,
-                    completion: @escaping (T) -> Void) where T: Codable {
+        requestType: RequestType,
+        url: URL,
+        cancelledBy token: RequestCancellationToken,
+        completion: @escaping (T) -> Void) where T: Codable {
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
 

@@ -9,11 +9,26 @@
 import Foundation
 import DLCommons
 
-struct CategoriesViewModel {
+class CategoriesViewModel {
 
     // MARK: - Properties
     
+    private var _categories: [CategoryViewModel] = [] {
+        didSet {
+            categories?(_categories)
+        }
+    }
+    
+    private var _subCategories: [SubCategoryViewModel] = [] {
+        didSet {
+            subCategories?(_subCategories)
+        }
+    }
+    init(actions: Actions) {
+        self.actions = actions
+    }
     let actions: Actions
+    
     struct Actions {
         let selectSubcategory: InputClosure<String>
         let onQuit: VoidClosure
@@ -25,13 +40,36 @@ struct CategoriesViewModel {
     }
 
 
-    // MARK: - Outputs
-
-
-
     // MARK: - Inputs
 
     func viewDidLoad() {
+        
+        _categories = [
+            CategoryViewModel(name: "Produits Maison"),
+                       CategoryViewModel(name: "Gateaux et Farines"),
+                       CategoryViewModel(name: "BOF"),
+                       CategoryViewModel(name: "Consommables"),
+                       CategoryViewModel(name: "Boissons et épices")
+        ]
+        
+        _subCategories = [
+        SubCategoryViewModel(title: "Hygiène", imageName: "Hygiene"),
+        SubCategoryViewModel(title: "Les graines", imageName: "Barley"),
+        SubCategoryViewModel(title: "Les biscuits", imageName: "Biscuits"),
+        SubCategoryViewModel(title: "Fromage", imageName: "Cheeses"),
+        SubCategoryViewModel(title: "Entretien", imageName: "Cleaning"),
+        SubCategoryViewModel(title: "Charcuterie fine", imageName: "Delicatessen"),
+        SubCategoryViewModel(title: "Les boissons", imageName: "Drink"),
+        SubCategoryViewModel(title: "Les oeufs", imageName: "Eggs"),
+        SubCategoryViewModel(title: "Les Farines", imageName: "Flour"),
+        SubCategoryViewModel(title: "Produits congelés", imageName: "Frozen"),
+        SubCategoryViewModel(title: "Les fruits", imageName: "Fruits"),
+        SubCategoryViewModel(title: "La viande", imageName: "Meat"),
+        SubCategoryViewModel(title: "Lait", imageName: "Milk"),
+        SubCategoryViewModel(title: "Animaux", imageName: "Pets"),
+        SubCategoryViewModel(title: "Epices", imageName: "Spices"),
+        SubCategoryViewModel(title: "Les légumes", imageName: "Vegetables"),
+        ]
 //        _categories = [
 //            Categorie(group: "Produits Maison", title: "Hygiène", image: #imageLiteral(resourceName: "Hygiene")),
 //                      Categorie(group: "Gateaux et Farines", title:"Les graines", image: #imageLiteral(resourceName: "Barley.png")),
@@ -50,12 +88,21 @@ struct CategoriesViewModel {
 //                      Categorie(group: "Boissons et épices", title: "Epices", image: #imageLiteral(resourceName: "Spices")),
 //                      Categorie(group: "Consommables", title: "Les légumes", image: #imageLiteral(resourceName: "Vegetables"))
 //        ]
-        
+//
     }
     func didSelectCategorie(at index: Int) {
 //        guard _categories.indices.contains(index) else { return }
 //        let categorie = _categories[index]
 //        action.didSelectCategory(categorie)
     }
+    
+    
+    // MARK: - Outputs
+
+    var categories: (([CategoryViewModel]) -> Void)?
+    
+    var subCategories: (([SubCategoryViewModel]) -> Void)?
+
+
 }
 
